@@ -89,29 +89,29 @@ jQuery(document).ready(function($){
         /*--slick Nav Responsive Navbar activation end--*/
     
         /*--progressing bar activation start--*/
-            var php = $('#php');
-        php.LineProgressbar({
-            percentage: 70,
-            fillBackgroundColor: '#1abc9c',
-            height: '10px',
-            radius: '15px'
-        });
-        var laravel = $('#laravel');    
-        laravel.LineProgressbar({
-            percentage: 30,
-            fillBackgroundColor: '#1abc9c',
-            height: '10px',
-            radius: '15px'
-        });
-        var codeigniter= $('#codeigniter');
-        codeigniter.LineProgressbar({
+            var python = $('#python');
+        python.LineProgressbar({
             percentage: 60,
             fillBackgroundColor: '#1abc9c',
             height: '10px',
             radius: '15px'
         });
-        var wordPress= $('#wordpress');
-        wordPress.LineProgressbar({
+        var frontend = $('#frontend');    
+        frontend.LineProgressbar({
+            percentage: 40,
+            fillBackgroundColor: '#1abc9c',
+            height: '10px',
+            radius: '15px'
+        });
+        var java= $('#java');
+        java.LineProgressbar({
+            percentage: 80,
+            fillBackgroundColor: '#1abc9c',
+            height: '10px',
+            radius: '15px'
+        });
+        var csharp= $('#csharp');
+        csharp.LineProgressbar({
             percentage: 50,
             fillBackgroundColor: '#1abc9c',
             height: '10px',
@@ -189,7 +189,7 @@ jQuery(document).ready(function($){
     
         /*-- Headertyping effect activatioin start--*/
         var typed = new Typed('.htitle', {
-          strings: ["TRUONG <span>LONG</span>",'REACT <span>NATIVE</span>','MOBILE <span>DEVELOPER</span>'],
+          strings: ["TRUONG <span>LONG</span>",'JAVA <span>WEB</span>','BACKEND <span>DEVELOPER</span>'],
           typeSpeed: 50,
           backSpeed: 60,
           smartBackspace: false,
