@@ -1,0 +1,624 @@
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .main-navar li {
+    padding: 23px 7px;
+    }
+    .post-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    }
+    .read-more-btn {
+    display: block;
+    text-align: center;
+    /*margin-top: 20px;*/
+    }
+    .comment-content .read-more-btn {
+    width: 100px;
+    }
+    #video-container {
+    position: absolute;
+    }
+    #video-container {
+        top:0%;
+        left:0%;
+        height:100%;
+        width:100%;
+        overflow: hidden;
+    }
+    video {
+        position:absolute;
+        z-index:-1;
+    }
+    video.fillWidth {
+        width: 100%;
+    }
+        .sample-image::after {
+        top: 26px;
+        left: 16px;
+        width: 95%;
+        height: 67%;
+    }
+    .comment-form textarea {
+    margin: 0;
+    margin-left: 22px;
+    width: 95%;
+    }
+    .my-hobbies {
+    padding-top: 35px;
+    display: none;
+    }
+    .testimonial-bottom {
+    margin-left: 35%;
+    }
+    .testimonial-text::after {
+    left: 37%;
+    }
+    .post-content p{
+        font-size: 15px;
+    }
+    input[type="text"] {
+    width: 46%;
+    }
+    .about-me img {
+    height: 300px;
+    margin-left: 20px;
+    box-shadow: 0 0 5px #ddd;
+    border-radius: 5px;
+    }
+}
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+    .main-navar.nav-fixed{
+        display: none
+    }
+    .contact-details {
+    margin-bottom: 35px;
+    }
+    .header-section .htitle {
+    font-size: 50px;
+    }
+    .header-section p {
+        font-size: 30px;
+    }
+    .section-title .htitle span {
+    display: block;
+    padding-top: 20px;
+    }
+    .section-title h1 span.color{
+        display: inline-block;
+    }
+    .mobile-padding-top-50{
+    padding-top: 50px;
+    }
+    .psize{
+        width: 45%;
+    }
+    .single-blog-post {
+    margin-bottom: 50px;
+    }
+    .post-thumb{
+        transform: none;
+    }
+      .slicknav_menu{
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        background: #1ABC9C;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 2;
+    }
+    .slicknav_btn {
+      background: #1ABC9C;
+    }
+    .slicknav_nav a:hover {
+      color: #000;
+    }
+    .slicknav_nav li {
+      background: transparent;
+    }
+    .slicknav_nav li:hover a {
+      background: #ddd;
+    }
+    .Switcher {
+        display: none;
+    }
+    .pre-loader .spinner {
+    margin-top: 80%;
+    }
+    .comment-content .read-more-btn {
+    width: 100px;
+    }
+    input[type="text"] {
+    display: inline-block;
+    width: 92%;
+    float: left;
+    margin-left: 25px;
+    }
+    .author-details span {
+    margin-top: 0;
+    }
+    .my-skill h2 {
+    text-align: center;
+    }
+
+    .my-hobbies {
+    text-align: center;
+    }
+
+    .date {
+    font-size: 30px;
+    }
+    .author-details{
+        font-size: 16px;
+    }
+    .author-details h2 span{
+        font-size: 14px;
+    }
+    textarea {
+    width: 92%;
+    margin-left: 25px;
+    }
+       .sample-image::after {
+    top: 26px;
+    left: 16px;
+    width: 95%;
+    height: 67%;
+    }
+    .mobile-logo.active {
+    position: fixed;
+    }
+    .mobile-logo {
+    display: inline-block;
+    }
+    .mobile-logo.active {
+    position: fixed;
+    }
+    .single-team-member {
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 50px;
+    }
+
+    .single-team-member {
+      width: 70%;
+      margin-left: 15%;
+      margin-bottom: 50px;
+    }
+    .my-hobbies,
+    .my-skill {
+      display: none;
+    }
+    .about-me img {
+    height: 285px;
+    margin-left: 20%;
+    }
+    .right-content p {
+    font-size: 14px;
+    text-align: left;
+    padding-bottom: 20px;
+    }
+    .testimonial-bottom {
+    margin-left: 35%;
+    }
+    .testimonial-text::after {
+    left: 37%;
+    }
+    .post-content p {
+    font-size: 14px;
+    }
+    input.subject {
+    width: 27% !important;
+    }
+    .team-section {
+    padding-bottom: 30px;
+    }
+    .single-team-wrapper.bottom{
+        margin-top: 0;
+    }
+    .happy-clients{
+        padding: 0;
+        padding-top: 78px;
+    }
+}
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) { 
+    .comment-content .read-more-btn {
+    width: 100px;
+    }
+    .main-navar.nav-fixed{
+        display: none
+    }
+    .header-section .htitle {
+    font-size: 40px;
+    }
+    .section-title .htitle span {
+    display: block;
+    padding-top: 20px;
+    }
+    .section-title h1 span.color{
+        display: inline-block;
+    }
+    .header-section p {
+        font-size: 30px;
+    }
+    input[type="submit"] {
+        margin: 20px;
+    }
+    .post-thumb{
+        transform: none;
+    }
+    .mobile-marign-bottom-30{
+        margin-bottom: 30px;
+    }
+    .mobile-padding-top-50 {
+    /*display: none;*/
+    }
+    .my-skill {
+    padding: 20px;
+    }
+    .about-myself {
+    padding: 20px;
+    }
+
+    .about-me img {
+        max-width: 80%;
+        margin: 20px;
+    }
+        .company-info {
+        text-align: left;
+    }
+    .psize{
+         width: 80%;
+         margin: 20px;
+     }
+     .single-blog-post{
+          margin-bottom: 50px;
+      }
+      .contact-details {
+        margin-bottom: 30px;
+     }
+    .slicknav_menu{
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        background: #1ABC9C;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        opacity: 0.6;
+    }
+    .slicknav_btn {
+      background: #1ABC9C;
+    }
+    .slicknav_nav a:hover {
+      color: #000;
+    }
+    .slicknav_nav li {
+      background: transparent;
+    }
+    .slicknav_nav li:hover a {
+      background: #ddd;
+    }
+    .Switcher {
+        display: none;
+    }
+    .pre-loader .spinner {
+    margin-top: 80%;
+    }
+    input[type="text"] {
+    display: inline-block;
+    width: 92%;
+    float: left;
+    margin-left: 25px;
+    }
+    .author-details span {
+    margin-top: 0;
+    }
+    .sample-image:after {
+    top: 31px;
+    left: 75px;
+    width: 74%;
+    }
+    .sample-image:after {
+    top: 31px;
+    left: 75px;
+    width: 74%;
+    }
+    .single-post-content h2 {
+      font-size: 20px;
+    }
+    .single-post-meta-tag a {
+      padding-bottom: 0;
+    }
+    .single-post-meta-tag {
+      padding-bottom: 50px;
+    }
+    .single-post-content p {
+      line-height: 1.9em;
+    }
+    .comment-form textarea {
+    margin: 0;
+    width: 100%;
+    }
+    .about-me img {
+    display: none;
+    }
+    .mobile-logo.active {
+    position: fixed;
+    }
+    .mobile-logo {
+    display: inline-block;
+    }
+    .mobile-logo.active {
+    position: fixed;
+    }
+    .single-post-meta-tag {
+      display: none;
+    }
+    .comment-replay {
+      display: none;
+    }
+    .comment-form input[type="submit"] {
+    margin-left: 0px;
+    }
+    .single-social-share {
+    padding-top: 20px;
+    }
+    .section-title h2{
+        font-size: 25px;
+    }
+}
+/* Wide Mobile Layout: 480px. */
+@media only screen and (max-width: 480px) { 
+        .header-section .htitle {
+        font-size: 29px;
+    }
+    .header-section h6{
+        font-size: 28px
+    }
+    .my-hobbies li {
+      padding: 0 10px;
+      margin-top: 30px;
+    }
+        .section-title h1 {
+        font-size: 22px;
+        line-height: 12px;
+    }
+    .section-title p {
+        padding-bottom: 10px;
+        font-size: 14px;
+    }
+        #working-experience {
+            /*display: none;*/
+        }
+        .section-padding {
+            padding: 50px 0;
+        }
+        .portfolio-menu ul li {
+        padding: 4px 2px;
+    }
+        .read-more-btn {
+        display: block;
+    }
+        .post-botom {
+        text-align: center;
+    }
+    .slicknav_menu{
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        background: #1ABC9C;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 2;
+    }
+    .slicknav_btn {
+      background: #1ABC9C;
+    }
+    .slicknav_nav a:hover {
+      color: #000;
+    }
+    .slicknav_nav li {
+      background: transparent;
+    }
+    .slicknav_nav li:hover a {
+      background: #ddd;
+    }
+    .Switcher {
+        display: none;
+    }
+    .section-title h1 span {
+    display: block;
+    margin-top: 30px;
+    }
+    .pre-loader .spinner {
+    margin-top: 80%;
+    }
+    .comment-form input[type=text] {
+    width: 100%;
+    margin-left: 0;
+    }
+    .user-thumb {
+    position: inherit;
+    display: block;
+    margin-bottom: 20px;
+    }
+    .comment-content {
+    padding: 10px 0;
+    width: 80%;
+    }
+    .single-comment-replay {
+    margin: 200px 0;
+    }
+    .sample-image::after {
+    top: 24px;
+    left: 39px;
+    width: 76%;
+    height: 58%;
+    }
+
+    .section-title.sample-page h1 {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .sample-page h4 a {
+    font-size: 28px;
+    }
+    input[type="text"] {
+    display: inline-block;
+    width: 92%;
+    float: left;
+    margin-left: 25px;
+    }
+    .post-content p,
+    .service-content p,
+    .count-text {
+    font-size: 14px;
+    }
+
+    .author-details span {
+    margin-top: 0;
+    }
+    textarea {
+    width: 92%;
+    margin-left: 24px;
+    }
+    .load-more-post .boxed-btn {
+    display: none;
+    }
+    .my-skill {
+      text-align: center;
+    }
+    .left-content {
+      text-align: center;
+    }
+    .left-content::after {
+      display: none;
+    }
+    .company-info {
+      text-align: center;
+    }
+    .right-content {
+      text-align: center;
+    }
+    .right-content p {
+      line-height: 2.2em;
+      padding: 20px;
+    }
+    .contact-details {
+      text-align: center;
+    }
+    .author-details {
+    position: relative;
+    margin-left: 0;
+    padding-bottom: 28px;
+    }
+    .about-myself .boxed-btn {
+      margin-left: 0;
+    }
+
+    .left-title {
+        font-size: 15px !important;
+    }
+
+    .right-title {
+        font-size: 15px !important;
+    }
+    .single-team-member {
+    margin-bottom: 50px;
+    width: 70%;
+    margin-left: 15%;
+      }
+    .footer-area p {
+      font-size: 14px;
+    }
+    .portfolio-menu {
+    display: none;
+    }
+    .mobile-logo {
+    display: inline-block;
+    }
+    .portfolio-item {
+      margin-left: 7%;
+    }
+    .mobile-logo.active {
+    position: fixed;
+    }
+    input[type="submit"] {
+    margin-left: 25px;
+    }
+    .scroll-to-top i{
+        display: none;
+    }
+    .what-i-do .section-title p,.team-section .section-title p {
+    padding-bottom: 20px;
+    } 
+    .post-content h3 {
+    font-size: 15px;
+    padding-top: 10px;
+    }
+    .testimonial-carousel.owl-carousel .owl-item img {
+    margin-left: 39%;
+    }
+    .testimonial-text::after {
+    margin-left: 42%;
+    }
+    .testimonial-bottom .author-details{
+        margin: 5px auto;
+        text-align: center;
+    }
+    .portfolio-menu ul li {
+    display: block;
+    margin-bottom: 0;
+    }
+        .about-me img {
+    display: none;
+    }
+    .section-title.sample-page h1 {
+          font-size: 18px;
+          line-height: 1.5;
+        }
+    .sample-page h4 a {
+            font-size: 28px;
+        }
+    .sample-image::after {
+    top: 24px;
+    left: 39px;
+    width: 76%;
+    height: 58%;
+    }
+    .single-post-meta-tag {
+      display: none;
+    }
+    .comment-replay {
+      display: none;
+    }
+    .comment-form input[type="submit"] {
+    margin-left: 0px;
+    }
+    #about-me {
+    padding-bottom: 40px;
+    }
+    #what-i-do {
+    padding-bottom: 15px;
+    }
+    #team {
+    padding-bottom: 10px;
+    }
+    #portfolio {
+    padding-bottom: 10px;
+    }
+    .contact-section .section-title h1, 
+        .contact-section .section-title p {
+            color: #fff;
+            padding-bottom: 40px;
+        }
+}
