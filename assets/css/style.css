@@ -1847,7 +1847,7 @@ Pre Loader Style
 }
 
 #blog .read-more-btn {
-    /*float: right;*/
+    float: right;
 }
 
 #blog .single-blog-post{
