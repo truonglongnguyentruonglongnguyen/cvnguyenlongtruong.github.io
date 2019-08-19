@@ -213,6 +213,15 @@ jQuery(document).ready(function($){
                     var newHeight = $("#blog .row>div").outerHeight()+130;
                     $("#blog .single-blog-post").height(newHeight);
                 }
+
+                var maxHeight = Math.max.apply(null, $(".project-frame-box .post-content").map(function ()
+                {
+                    return $(this).outerHeight();
+                }).get());
+
+                $(".project-frame-box").each(function() {
+                  $( this ).outerHeight(maxHeight+ 370);
+                });
         };
                 
         $(window).on('resize', function () {
@@ -229,6 +238,15 @@ jQuery(document).ready(function($){
                     var newHeight = $("#blog .row>div").outerHeight()+130;
                     $("#blog .single-blog-post").height(newHeight);
                 }
+
+                var maxHeight = Math.max.apply(null, $(".project-frame-box .post-content").map(function ()
+                {
+                    return $(this).outerHeight();
+                }).get());
+                
+                $(".project-frame-box").each(function() {
+                  $( this ).outerHeight(maxHeight + 370);
+                });
         });
     
         $(window).on('scroll', function () {

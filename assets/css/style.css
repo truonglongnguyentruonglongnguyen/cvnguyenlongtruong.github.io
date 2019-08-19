@@ -1190,6 +1190,7 @@ Blog section Css
     margin-bottom: 30px;
     transition: .5s;
     height: 100% !important;
+    position: relative;
 }
 .post-content {
     padding:10px 20px 0px 20px;
@@ -1211,8 +1212,9 @@ Blog section Css
 
 .post-botom {
     padding: 20px;
-    padding-top: 35px;
     width: 100%;
+    bottom: 10px;
+    position: absolute;
 }
 
 .post-botom p {
@@ -1857,4 +1859,10 @@ Pre Loader Style
    -moz-box-shadow: 0 0 5px #ddd;
         box-shadow: 0 0 5px #ddd;
     transition: .5s;*/
+}
+
+.project-frame-box {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
 }
