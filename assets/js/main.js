@@ -214,13 +214,28 @@ jQuery(document).ready(function($){
                     $("#blog .single-blog-post").height(newHeight);
                 }
 
-                var maxHeight = Math.max.apply(null, $(".project-frame-box .post-content").map(function ()
+                /*var maxHeight = Math.max.apply(null, $(".project-frame-box .post-content").map(function ()
                 {
                     return $(this).outerHeight();
                 }).get());
 
                 $(".project-frame-box").each(function() {
                   $( this ).outerHeight(maxHeight+ 370);
+                });*/
+                let allElementPostContent = $(".project-frame-box .post-content");
+                function getMaxHeight(elements) {
+                    return Math.max.apply(null, elements.map(function ()
+                    {
+                        return $(this).outerHeight();
+                    }).get());
+                }
+                var numFramePerRow = Math.floor($(window).width()/$(".project-frame-box").first().width());
+                $(".project-frame-box").each(function() {
+                    let startElementIndex = Math.floor($(this).index()/numFramePerRow)*numFramePerRow;
+                    let endElementIndex = startElementIndex + numFramePerRow;
+                    let elementsOfRow = allElementPostContent.slice(startElementIndex, endElementIndex);
+                    let maxHeight = getMaxHeight(elementsOfRow);
+                    $( this ).outerHeight(maxHeight + 370);
                 });
         };
                 
@@ -239,13 +254,29 @@ jQuery(document).ready(function($){
                     $("#blog .single-blog-post").height(newHeight);
                 }
 
-                var maxHeight = Math.max.apply(null, $(".project-frame-box .post-content").map(function ()
+                /*var maxHeight = Math.max.apply(null, $(".project-frame-box .post-content").map(function ()
                 {
                     return $(this).outerHeight();
                 }).get());
                 
                 $(".project-frame-box").each(function() {
                   $( this ).outerHeight(maxHeight + 370);
+                });*/
+                let allElementPostContent = $(".project-frame-box .post-content");
+                function getMaxHeight(elements) {
+                    return Math.max.apply(null, elements.map(function ()
+                    {
+                        return $(this).outerHeight();
+                    }).get());
+                }
+                var numFramePerRow = Math.floor($(window).width()/$(".project-frame-box").first().width());
+                $(".project-frame-box").each(function() {
+                    let startElementIndex = Math.floor($(this).index()/numFramePerRow)*numFramePerRow;
+                    let endElementIndex = startElementIndex + numFramePerRow;
+                    let elementsOfRow = allElementPostContent.slice(startElementIndex, endElementIndex);
+                    let maxHeight = getMaxHeight(elementsOfRow);
+                    $(this).outerHeight(maxHeight + 370);
+                    //$(this).find("#portfolio .single-blog-post > div").first().css('max-height', heightVal + 'px');
                 });
         });
     
