@@ -192,7 +192,7 @@ a:hover {
 }
 
 .about-myself, .my-skill {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 .about-myself .section-title h4, .my-skill .section-title h4 {
     text-decoration: underline;
@@ -1230,7 +1230,7 @@ Blog section Css
     position: absolute;
 }
 
-.post-botom p {
+.post-botom a {
     display: inline-block;
     padding-right: 20px;
     font-size: 14px;
