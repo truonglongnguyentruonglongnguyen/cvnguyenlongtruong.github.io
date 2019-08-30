@@ -90,14 +90,14 @@ jQuery(document).ready(function($){
     
         /*--progressing bar activation start--*/
         var daa = $('#daa');    
-        frontend.LineProgressbar({
+        daa.LineProgressbar({
             percentage: 80,
             fillBackgroundColor: '#1abc9c',
             height: '10px',
             radius: '15px'
         });
-        var daa = $('#deep-learning');    
-        frontend.LineProgressbar({
+        var deeplearning = $('#deep-learning');    
+        deeplearning.LineProgressbar({
             percentage: 20,
             fillBackgroundColor: '#1abc9c',
             height: '10px',
