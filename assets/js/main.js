@@ -89,7 +89,21 @@ jQuery(document).ready(function($){
         /*--slick Nav Responsive Navbar activation end--*/
     
         /*--progressing bar activation start--*/
-            var python = $('#python');
+        var daa = $('#daa');    
+        frontend.LineProgressbar({
+            percentage: 80,
+            fillBackgroundColor: '#1abc9c',
+            height: '10px',
+            radius: '15px'
+        });
+        var daa = $('#deep-learning');    
+        frontend.LineProgressbar({
+            percentage: 20,
+            fillBackgroundColor: '#1abc9c',
+            height: '10px',
+            radius: '15px'
+        });
+        var python = $('#python');
         python.LineProgressbar({
             percentage: 60,
             fillBackgroundColor: '#1abc9c',
@@ -98,7 +112,7 @@ jQuery(document).ready(function($){
         });
         var frontend = $('#frontend');    
         frontend.LineProgressbar({
-            percentage: 40,
+            percentage: 30,
             fillBackgroundColor: '#1abc9c',
             height: '10px',
             radius: '15px'
