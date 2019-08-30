@@ -214,60 +214,33 @@ jQuery(document).ready(function($){
 
 });
         window.onload =  function () {
-                if($(window).width() > 992) {
-                    var newHeight = $("#blog .row>div").outerHeight()+120;
-                    $("#blog .single-blog-post").height(newHeight);
-                } else if ($(window).width() > 768) {
-                    var newHeight = $("#blog .row>div").outerHeight()+200;
-                    $("#blog .single-blog-post").height(newHeight);
-                } else if ($(window).width() > 480) {
-                    var newHeight = $("#blog .row>div").outerHeight()+110;
-                    $("#blog .single-blog-post").height(newHeight);
-                } else {
-                    var newHeight = $("#blog .row>div").outerHeight()+130;
-                    $("#blog .single-blog-post").height(newHeight);
-                }
-
-                /*var maxHeight = Math.max.apply(null, $(".project-frame-box .post-content").map(function ()
-                {
-                    return $(this).outerHeight();
-                }).get());
-
-                $(".project-frame-box").each(function() {
-                  $( this ).outerHeight(maxHeight+ 370);
-                });*/
-                let allElementPostContent = $(".project-frame-box .post-content");
                 function getMaxHeight(elements) {
                     return Math.max.apply(null, elements.map(function ()
                     {
                         return $(this).outerHeight();
                     }).get());
                 }
-                var numFramePerRow = Math.floor($(window).width()/$(".project-frame-box").first().width());
+
+                let allElementProjectContent = $(".project-frame-box .post-content");
+                
+
+                let numFramePerRow = Math.floor($(window).width()/$(".project-frame-box").first().width());
                 $(".project-frame-box").each(function() {
                     let startElementIndex = Math.floor($(this).index()/numFramePerRow)*numFramePerRow;
                     let endElementIndex = startElementIndex + numFramePerRow;
-                    let elementsOfRow = allElementPostContent.slice(startElementIndex, endElementIndex);
+                    let elementsOfRow = allElementProjectContent.slice(startElementIndex, endElementIndex);
                     let maxHeight = getMaxHeight(elementsOfRow);
                     $( this ).outerHeight(maxHeight + 370);
+                });
+
+                let allElementBlogContent = $("#blog .post-content");
+                let maxElementBlogContentHeight = getMaxHeight(allElementBlogContent);
+                $("#blog .single-blog-post").each(function() {
+                    $( this ).outerHeight(maxElementBlogContentHeight + 80);
                 });
         };
                 
         $(window).on('resize', function () {
-                if($(window).width() > 992) {
-                    var newHeight = $("#blog .row>div").outerHeight()+120;
-                    $("#blog .single-blog-post").height(newHeight);
-                } else if ($(window).width() > 768) {
-                    var newHeight = $("#blog .row>div").outerHeight()+200;
-                    $("#blog .single-blog-post").height(newHeight);
-                } else if ($(window).width() > 480) {
-                    var newHeight = $("#blog .row>div").outerHeight()+110;
-                    $("#blog .single-blog-post").height(newHeight);
-                } else {
-                    var newHeight = $("#blog .row>div").outerHeight()+130;
-                    $("#blog .single-blog-post").height(newHeight);
-                }
-
                 /*var maxHeight = Math.max.apply(null, $(".project-frame-box .post-content").map(function ()
                 {
                     return $(this).outerHeight();
@@ -276,21 +249,26 @@ jQuery(document).ready(function($){
                 $(".project-frame-box").each(function() {
                   $( this ).outerHeight(maxHeight + 370);
                 });*/
-                let allElementPostContent = $(".project-frame-box .post-content");
+                let allElementProjectContent = $(".project-frame-box .post-content");
                 function getMaxHeight(elements) {
                     return Math.max.apply(null, elements.map(function ()
                     {
                         return $(this).outerHeight();
                     }).get());
                 }
-                var numFramePerRow = Math.floor($(window).width()/$(".project-frame-box").first().width());
+                let numFramePerRow = Math.floor($(window).width()/$(".project-frame-box").first().width());
                 $(".project-frame-box").each(function() {
                     let startElementIndex = Math.floor($(this).index()/numFramePerRow)*numFramePerRow;
                     let endElementIndex = startElementIndex + numFramePerRow;
-                    let elementsOfRow = allElementPostContent.slice(startElementIndex, endElementIndex);
+                    let elementsOfRow = allElementProjectContent.slice(startElementIndex, endElementIndex);
                     let maxHeight = getMaxHeight(elementsOfRow);
                     $(this).outerHeight(maxHeight + 370);
-                    //$(this).find("#portfolio .single-blog-post > div").first().css('max-height', heightVal + 'px');
+                });
+
+                let allElementBlogContent = $("#blog .post-content");
+                let maxElementBlogContentHeight = getMaxHeight(allElementBlogContent);
+                $("#blog .single-blog-post").each(function() {
+                    $( this ).outerHeight(maxElementBlogContentHeight + 80);
                 });
         });
     
