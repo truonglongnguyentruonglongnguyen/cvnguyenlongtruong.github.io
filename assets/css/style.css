@@ -191,6 +191,16 @@ a:hover {
     text-transform: uppercase;
 }
 
+.about-myself, .my-skill {
+    padding-bottom: 20px;
+}
+.about-myself .section-title h4, .my-skill .section-title h4 {
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: #1ABC9C;
+    padding-bottom: 20px;
+}
+
 .section-title h1 span {
     font-style: italic;
     font-size: 15px;
@@ -453,7 +463,7 @@ li.active a {
 About-Me Area CSS 
 ====================*/
 .my-skill {
-    margin-left: -10px;
+    /*margin-left: -10px;*/
 }
 #about-me {
     padding-bottom: 77px;
@@ -481,8 +491,11 @@ About-Me Area CSS
     border-radius: 50%;
     box-shadow: 0 0 8px #777;
     height: 284px;
-    margin-left: 50px;
-    }
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .right-title {
     float: right;
     padding-bottom: 5px;

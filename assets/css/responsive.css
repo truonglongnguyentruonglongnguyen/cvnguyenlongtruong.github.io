@@ -61,9 +61,10 @@
     }
     .about-me img {
     height: 300px;
-    margin-left: 20px;
+    /*margin-left: 20px;
     box-shadow: 0 0 5px #ddd;
-    border-radius: 5px;
+    border-radius: 5px;*/
+    border-radius: 50%;
     }
 }
 
@@ -190,11 +191,13 @@
     }
     .my-hobbies,
     .my-skill {
-      display: none;
+        padding-top: 20px;
+      /*display: none;*/
     }
     .about-me img {
-    height: 285px;
-    margin-left: 20%;
+    display: none;
+    /*height: 285px;
+    margin-left: 20%;*/
     }
     .right-content p {
     font-size: 14px;
@@ -259,6 +262,7 @@
     }
     .my-skill {
     padding: 20px;
+    padding-top: 20px;
     }
     .about-myself {
     padding: 20px;
