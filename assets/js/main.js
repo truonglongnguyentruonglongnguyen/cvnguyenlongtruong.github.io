@@ -96,7 +96,7 @@ jQuery(document).ready(function($){
             height: '10px',
             radius: '15px'
         });
-        var deeplearning = $('#deeplearning');    
+        var deeplearning = $('#deep-learning');    
         deeplearning.LineProgressbar({
             percentage: 20,
             fillBackgroundColor: '#1abc9c',
