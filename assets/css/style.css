@@ -479,7 +479,7 @@ About-Me Area CSS
 .about-me img {
     /*border-radius: 5px;*/
     border-radius: 50%;
-    box-shadow: 0 0 5px #ddd;
+    box-shadow: 0 0 8px #777;
     height: 284px;
     margin-left: 50px;
     }
