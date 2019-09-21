@@ -1237,6 +1237,10 @@ Blog section Css
     font-weight: 400;
 }
 
+.post-botom .project-and-demo {
+    padding-bottom: 10px;
+}
+
 .post-botom i {
     padding-right: 5px;
     color: #1ABC9C;
@@ -1878,4 +1882,104 @@ Pre Loader Style
     margin-top: 10px;
     margin-bottom: 10px;
     position: relative;
+}
+
+.project-resume .resume-title h3 {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 20px;
+}
+
+
+
+.project-resume .project-list {
+    position: relative;
+}
+
+
+.project-resume .project-list:after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 99%;
+    background: #1ABC9C;
+    left: 22px;
+    top: 0;
+}
+
+
+.project-resume .resume-title h3 i {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    background: #1ABC9C;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.project-resume .project-list .single-project .project-title .project-name:before {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    border: 3px solid #58dbc1;
+    left: 12px;
+    z-index: 1;
+    background: #1ABC9C;
+}
+
+
+
+.project-resume .project-list .single-project {
+    margin-bottom: 30px;
+    padding-left: 55px;
+}
+
+.single-resume .project-list .single-project .project-title .project-name {
+    position: relative;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.project-resume .project-list .single-project .project-content {
+    clear: both;
+}
+
+.project-resume .project-list .single-project {
+    margin-bottom: 30px;
+    padding-left: 55px;
+}
+
+.project-resume .project-list .single-project:last-child {
+    margin-bottom: 40px;
+}
+
+
+
+.project-resume .project-list .single-project .project-content p {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    margin-bottom: 0;
 }
