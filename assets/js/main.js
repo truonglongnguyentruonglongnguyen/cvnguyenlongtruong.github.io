@@ -203,7 +203,7 @@ jQuery(document).ready(function($){
     
         /*-- Headertyping effect activatioin start--*/
         var typed = new Typed('.htitle', {
-          strings: ["TRUONG <span>LONG</span>",'JAVA <span>WEB</span>','BACKEND <span>DEVELOPER</span>'],
+          strings: ["TRUONG <span>LONG</span>",' <span></span>','BACKEND <span>DEVELOPER</span>'],
           typeSpeed: 50,
           backSpeed: 60,
           smartBackspace: false,
