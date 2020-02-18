@@ -88,46 +88,60 @@ jQuery(document).ready(function($){
         /*--slick Nav Responsive Navbar activation end--*/
     
         /*--progressing bar activation start--*/
-        var daa = $('#daa');    
-        daa.LineProgressbar({
-            percentage: 80,
+        var dsa = $('#dsa');    
+        dsa.LineProgressbar({
+            ShowProgressCount: false,
+            percentage: 100,
             fillBackgroundColor: '#1abc9c',
-            height: '10px',
+            height: '5px',
             radius: '15px'
         });
-        var deeplearning = $('#deep-learning');    
-        deeplearning.LineProgressbar({
-            percentage: 20,
+        var programmingLanguage = $('#programming-language');    
+        programmingLanguage.LineProgressbar({
+            ShowProgressCount: false,
+            percentage: 100,
             fillBackgroundColor: '#1abc9c',
-            height: '10px',
+            height: '5px',
             radius: '15px'
         });
-        var python = $('#python');
-        python.LineProgressbar({
-            percentage: 60,
+        var database = $('#database');
+        database.LineProgressbar({
+            ShowProgressCount: false,
+            percentage: 100,
             fillBackgroundColor: '#1abc9c',
-            height: '10px',
+            height: '5px',
             radius: '15px'
         });
-        var frontend = $('#frontend');    
-        frontend.LineProgressbar({
-            percentage: 30,
+        var analyticalSkills = $('#analytical-skills');    
+        analyticalSkills.LineProgressbar({
+            ShowProgressCount: false,
+            percentage: 100,
             fillBackgroundColor: '#1abc9c',
-            height: '10px',
+            height: '5px',
             radius: '15px'
         });
-        var java= $('#java');
-        java.LineProgressbar({
-            percentage: 80,
+        var problemSolvingSkills = $('#problem-solving-skills');    
+        problemSolvingSkills.LineProgressbar({
+            ShowProgressCount: false,
+            percentage: 100,
             fillBackgroundColor: '#1abc9c',
-            height: '10px',
+            height: '5px',
             radius: '15px'
         });
-        var csharp= $('#csharp');
-        csharp.LineProgressbar({
-            percentage: 50,
+        var strongCollaborationSkills = $('#strong-collaboration-skills');
+        strongCollaborationSkills.LineProgressbar({
+            ShowProgressCount: false,
+            percentage: 100,
             fillBackgroundColor: '#1abc9c',
-            height: '10px',
+            height: '5px',
+            radius: '15px'
+        });
+        var agileSkills= $('#agile-skills');
+        agileSkills.LineProgressbar({
+            ShowProgressCount: false,
+            percentage: 100,
+            fillBackgroundColor: '#1abc9c',
+            height: '5px',
             radius: '15px'
         });
         
@@ -202,12 +216,13 @@ jQuery(document).ready(function($){
     
         /*-- Headertyping effect activatioin start--*/
         var typed = new Typed('.htitle', {
-          strings: ["TRUONG <span>LONG</span>", "SOFTWARE <span>ENGINEER</span>", "WEBSITE <span>BACKEND</span>"],
+          strings: ["TRUONG <span>LONG</span>",'SOFTWARE <span>ENGINEER</span>','WEBSITE <span>BACKEND</span>'],
           typeSpeed: 50,
           backSpeed: 60,
-          smartBackspace: true,
+          smartBackspace: false,
           loop:true,
-          showCursor: false, 
+          showCursor: false,
+          autoInsertCss: true,
         });
     /*-- Headertyping effect activatioin end--*/
 
@@ -237,8 +252,15 @@ jQuery(document).ready(function($){
                 $("#blog .single-blog-post").each(function() {
                     $( this ).outerHeight(maxElementBlogContentHeight + 80);
                 });
+
+                // $( document ).ready(function() {
+                //     var initialHeightHtitle = $(".header-section .htitle").first().outerHeight();
+                //     alert(initialHeightHtitle);
+                //     $(".header-section .htitle").css("min-height", initialHeightHtitle + "px");
+                // });
+
         };
-                
+
         $(window).on('resize', function () {
                 /*var maxHeight = Math.max.apply(null, $(".project-frame-box .post-content").map(function ()
                 {
@@ -269,6 +291,9 @@ jQuery(document).ready(function($){
                 $("#blog .single-blog-post").each(function() {
                     $( this ).outerHeight(maxElementBlogContentHeight + 80);
                 });
+
+                var initialHeightHtitle = $(".header-section .htitle").first().outerHeight();
+                $(".header-section .htitle").css("min-height", initialHeightHtitle + "px");
         });
     
         $(window).on('scroll', function () {
@@ -303,31 +328,31 @@ jQuery(document).ready(function($){
         /*-- Nguyen Truong Long --*/
 
 
-            $(window).scroll(function() {
-                var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-                $(".fade-scroll").each(function() {
-                  /* Check the location of each desired element */
-                  var objectBottom = $(this).offset().top + $(this).outerHeight();
+            // $(window).scroll(function() {
+            //     var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+            //     $(".fade-scroll").each(function() {
+            //       /* Check the location of each desired element */
+            //       var objectBottom = $(this).offset().top + $(this).outerHeight();
 
-                  var objectTop = $(this).offset().top;
+            //       var objectTop = $(this).offset().top;
                   
-                  /* If the element is completely within bounds of the window, fade it in */
-                  if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-                    if ($(this).css("opacity")==0) {
-                        $(this).animate({ left: "0px", opacity: "1" }, 500);
-                    }
-                  } 
-                  if(objectTop >= windowBottom) {   //object goes out of view (scrolling up)
-                    if ($(this).css("opacity")==1) {
-                      if($(document).width() >= 576) {
-                        $(this).animate({ opacity: "0", left: "50px" }, 500);
-                      } else {
-                        $(this).animate({ opacity: "0", left: "20px" }, 500);
-                      }
-                    }
-                  }
-                });
-              }).scroll(); //invoke scroll-handler on page-load
+            //       /* If the element is completely within bounds of the window, fade it in */
+            //       if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+            //         if ($(this).css("opacity")==0) {
+            //             $(this).animate({ left: "0px", opacity: "1" }, 500);
+            //         }
+            //       } 
+            //       if(objectTop >= windowBottom) {   //object goes out of view (scrolling up)
+            //         if ($(this).css("opacity")==1) {
+            //           if($(document).width() >= 576) {
+            //             $(this).animate({ opacity: "0", left: "50px" }, 500);
+            //           } else {
+            //             $(this).animate({ opacity: "0", left: "20px" }, 500);
+            //           }
+            //         }
+            //       }
+            //     });
+            //   }).scroll(); //invoke scroll-handler on page-load
 
     
     jQuery(window).load(function(){
