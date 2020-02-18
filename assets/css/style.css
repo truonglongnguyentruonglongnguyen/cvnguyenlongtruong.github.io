@@ -315,6 +315,8 @@ Header-area CSS
     font-weight: 900;
     text-transform: uppercase;
     text-shadow: 0 0 4px #333;
+    display: block;
+    min-height: 99px;
 }
 
 .header-section .htitle span {
@@ -490,7 +492,7 @@ About-Me Area CSS
     /*border-radius: 5px;*/
     border-radius: 50%;
     box-shadow: 0 0 8px #777;
-    height: 284px;
+    /*height: 284px;*/
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -1025,7 +1027,7 @@ Testimonial Css
     padding-bottom: 20px;
 }
 .testimonial-section{
-background-color: #E5E4EA;
+background-color: #f5f5f5;
 }
 .testimonial-text {
     margin: 10px;
@@ -1904,7 +1906,7 @@ Pre Loader Style
     position: absolute;
     content: '';
     width: 2px;
-    height: 99%;
+    height: 100%;
     background: #1ABC9C;
     left: 22px;
     top: 0;
@@ -1950,8 +1952,9 @@ Pre Loader Style
     padding-left: 55px;
 }
 
-.single-resume .project-list .single-project .project-title .project-name {
-    position: relative;
+
+.project-resume .project-list .single-project .project-title .project-name h4 {
+    line-height: 1.2 !important;
 }
 
 .pull-right {
@@ -1960,6 +1963,7 @@ Pre Loader Style
 
 .pull-left {
     float: left !important;
+    width: 80%;
 }
 
 .project-resume .project-list .single-project .project-content {
@@ -1982,4 +1986,13 @@ Pre Loader Style
     line-height: 22px;
     font-weight: 400;
     margin-bottom: 0;
+}
+
+
+.project-resume .project-list .single-project .project-content ul li {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
 }
