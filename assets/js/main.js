@@ -112,6 +112,14 @@ jQuery(document).ready(function($){
             height: '5px',
             radius: '15px'
         });
+        var ai = $('#ai');
+        database.LineProgressbar({
+            ShowProgressCount: false,
+            percentage: 100,
+            fillBackgroundColor: '#1abc9c',
+            height: '5px',
+            radius: '15px'
+        });
         var analyticalSkills = $('#analytical-skills');    
         analyticalSkills.LineProgressbar({
             ShowProgressCount: false,
