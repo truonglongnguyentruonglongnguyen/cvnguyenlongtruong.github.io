@@ -113,7 +113,7 @@ jQuery(document).ready(function($){
             radius: '15px'
         });
         var ai = $('#ai');
-        database.LineProgressbar({
+        ai.LineProgressbar({
             ShowProgressCount: false,
             percentage: 100,
             fillBackgroundColor: '#1abc9c',
