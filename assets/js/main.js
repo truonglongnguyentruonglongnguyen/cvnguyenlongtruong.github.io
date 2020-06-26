@@ -246,7 +246,6 @@ jQuery(document).ready(function($){
 
                 $(".single-work-item > div.row").each(function() {
                     let elementHeight = $(this).outerHeight();
-                    alert(elementHeight);
                     $(this).children( "div.row > div" ).css("cssText", "height: " + elementHeight + "px !important;");
                 });
 
@@ -262,7 +261,6 @@ jQuery(document).ready(function($){
 
                 $(".single-work-item > div.row").each(function() {
                     let elementHeight = $(this).outerHeight();
-                    alert(elementHeight);
                     $(this).children( "div.row > div" ).css("cssText", "height: " + elementHeight + "px !important;");
                 });
 
