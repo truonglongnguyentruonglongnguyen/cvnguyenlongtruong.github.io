@@ -239,7 +239,7 @@ jQuery(document).ready(function($){
         window.onload =  function () {
                 $(".single-work-item > div.row").each(function() {
                     let elementHeight = $(this).outerHeight() - 15;
-                    $(this).children( "div.row > div" ).css("cssText", "height: " + elementHeight + "px !important;");
+                    $(this).children( "div.row > div:first" ).css("cssText", "height: " + elementHeight + "px !important;");
                 });
         
                 function getMaxHeight(elements) {
@@ -260,7 +260,7 @@ jQuery(document).ready(function($){
 
                 $(".single-work-item > div.row").each(function() {
                     let elementHeight = $(this).outerHeight() - 15;
-                    $(this).children( "div.row > div" ).css("cssText", "height: " + elementHeight + "px !important;");
+                    $(this).children( "div.row > div:first" ).css("cssText", "height: " + elementHeight + "px !important;");
                 });
 
                 function getMaxHeight(elements) {
