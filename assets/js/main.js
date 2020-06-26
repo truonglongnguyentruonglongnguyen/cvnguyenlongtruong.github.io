@@ -237,11 +237,6 @@ jQuery(document).ready(function($){
 });
   
         window.onload =  function () {
-                $(".single-work-item > div.row").each(function() {
-                    let elementHeight = $(this).outerHeight() - 15;
-                    $(this).children( "div.row > div:first" ).css("cssText", "height: " + elementHeight + "px !important;");
-                });
-        
                 function getMaxHeight(elements) {
                     return Math.max.apply(null, elements.map(function ()
                     {
@@ -249,18 +244,29 @@ jQuery(document).ready(function($){
                     }).get());
                 }
 
+                $(".single-work-item > div.row").each(function() {
+                    let elementHeight = $(this).outerHeight() - 15;
+                    if ($(document).width() > 767) {
+                        $(this).children( "div.row > div:first" ).css("cssText", "height: " + elementHeight + "px !important;");
+                    }
+                });
+
                 let allElementBlogContent = $("#blog .post-content");
                 let maxElementBlogContentHeight = getMaxHeight(allElementBlogContent);
                 $("#blog .single-blog-post").each(function() {
                     $( this ).outerHeight(maxElementBlogContentHeight + 80);
                 });
+
         };
 
         $(window).on('resize', function () {
 
                 $(".single-work-item > div.row").each(function() {
+                    $(this).children( "div.row > div:first" ).css("cssText", "height: '' !important;");
                     let elementHeight = $(this).outerHeight() - 15;
-                    $(this).children( "div.row > div:first" ).css("cssText", "height: " + elementHeight + "px !important;");
+                    if ($(document).width() > 767) {
+                        $(this).children( "div.row > div:first" ).css("cssText", "height: " + elementHeight + "px !important;");
+                    }
                 });
 
                 function getMaxHeight(elements) {
