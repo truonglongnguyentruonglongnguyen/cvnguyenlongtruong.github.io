@@ -633,6 +633,7 @@ Working Experience Css
 .left-content {
     padding: 0px 20px;
     position: relative;
+    height: 100%;
 }
 
 .left-content:after {
