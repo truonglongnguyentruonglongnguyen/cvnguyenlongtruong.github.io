@@ -1,3 +1,4 @@
+
 (function ($) {
   "use strict";
 
@@ -87,32 +88,68 @@ jQuery(document).ready(function($){
         /*--slick Nav Responsive Navbar activation end--*/
     
         /*--progressing bar activation start--*/
-            var php = $('#php');
-        php.LineProgressbar({
-            percentage: 70,
+        var dsa = $('#dsa');    
+        dsa.LineProgressbar({
+            ShowProgressCount: false,
+            percentage: 100,
             fillBackgroundColor: '#1abc9c',
-            height: '10px',
+            height: '5px',
             radius: '15px'
         });
-        var laravel = $('#laravel');    
-        laravel.LineProgressbar({
-            percentage: 30,
+        var programmingLanguage = $('#programming-language');    
+        programmingLanguage.LineProgressbar({
+            ShowProgressCount: false,
+            percentage: 100,
             fillBackgroundColor: '#1abc9c',
-            height: '10px',
+            height: '5px',
             radius: '15px'
         });
-        var codeigniter= $('#codeigniter');
-        codeigniter.LineProgressbar({
-            percentage: 60,
+        var database = $('#database');
+        database.LineProgressbar({
+            ShowProgressCount: false,
+            percentage: 100,
             fillBackgroundColor: '#1abc9c',
-            height: '10px',
+            height: '5px',
             radius: '15px'
         });
-        var wordPress= $('#wordpress');
-        wordPress.LineProgressbar({
-            percentage: 50,
+        var ai = $('#ai');
+        ai.LineProgressbar({
+            ShowProgressCount: false,
+            percentage: 100,
             fillBackgroundColor: '#1abc9c',
-            height: '10px',
+            height: '5px',
+            radius: '15px'
+        });
+        var analyticalSkills = $('#analytical-skills');    
+        analyticalSkills.LineProgressbar({
+            ShowProgressCount: false,
+            percentage: 100,
+            fillBackgroundColor: '#1abc9c',
+            height: '5px',
+            radius: '15px'
+        });
+        var problemSolvingSkills = $('#problem-solving-skills');    
+        problemSolvingSkills.LineProgressbar({
+            ShowProgressCount: false,
+            percentage: 100,
+            fillBackgroundColor: '#1abc9c',
+            height: '5px',
+            radius: '15px'
+        });
+        var strongCollaborationSkills = $('#strong-collaboration-skills');
+        strongCollaborationSkills.LineProgressbar({
+            ShowProgressCount: false,
+            percentage: 100,
+            fillBackgroundColor: '#1abc9c',
+            height: '5px',
+            radius: '15px'
+        });
+        var agileSkills= $('#agile-skills');
+        agileSkills.LineProgressbar({
+            ShowProgressCount: false,
+            percentage: 100,
+            fillBackgroundColor: '#1abc9c',
+            height: '5px',
             radius: '15px'
         });
         
@@ -155,7 +192,7 @@ jQuery(document).ready(function($){
             dots:true,
             nav:false,
             autoplay:true,
-            autoplayTimeout:1000,
+            autoplayTimeout:3000,
             autoplayHoverPause:true,
             responsive : {
               0 : {
@@ -187,19 +224,67 @@ jQuery(document).ready(function($){
     
         /*-- Headertyping effect activatioin start--*/
         var typed = new Typed('.htitle', {
-          strings: ["TRUONG <span>Long</span>",'FULL <span>STACK</span>','WEB <span>DEVELOPER</span>'],
+          strings: ['TRUONG <span>LONG</span>', 'WEB <span>BACKEND</span>', 'SOFTWARE <span>ENGINEER</span>'],
           typeSpeed: 50,
           backSpeed: 60,
           smartBackspace: false,
           loop:true,
-          showCursor: false, 
+          showCursor: false,
+          autoInsertCss: true,
         });
     /*-- Headertyping effect activatioin end--*/
 
 });
-                
-                
-                
+  
+        window.onload =  function () {
+                function getMaxHeight(elements) {
+                    return Math.max.apply(null, elements.map(function ()
+                    {
+                        return $(this).outerHeight();
+                    }).get());
+                }
+
+                $(".single-work-item > div.row").each(function() {
+                    let elementHeight = $(this).outerHeight() - 15;
+                    if ($(document).width() > 767) {
+                        $(this).children( "div.row > div:first" ).css("cssText", "height: " + elementHeight + "px !important;");
+                    }
+                });
+
+                let allElementBlogContent = $("#blog .post-content");
+                let maxElementBlogContentHeight = getMaxHeight(allElementBlogContent);
+                $("#blog .single-blog-post").each(function() {
+                    $( this ).outerHeight(maxElementBlogContentHeight + 80);
+                });
+
+        };
+
+        $(window).on('resize', function () {
+
+                $(".single-work-item > div.row").each(function() {
+                    $(this).children( "div.row > div:first" ).css("cssText", "height: '' !important;");
+                    let elementHeight = $(this).outerHeight() - 15;
+                    if ($(document).width() > 767) {
+                        $(this).children( "div.row > div:first" ).css("cssText", "height: " + elementHeight + "px !important;");
+                    }
+                });
+
+                function getMaxHeight(elements) {
+                    return Math.max.apply(null, elements.map(function ()
+                    {
+                        return $(this).outerHeight();
+                    }).get());
+                }
+
+                let allElementBlogContent = $("#blog .post-content");
+                let maxElementBlogContentHeight = getMaxHeight(allElementBlogContent);
+                $("#blog .single-blog-post").each(function() {
+                    $( this ).outerHeight(maxElementBlogContentHeight + 80);
+                });
+
+                var initialHeightHtitle = $(".header-section .htitle").first().outerHeight();
+                $(".header-section .htitle").css("min-height", initialHeightHtitle + "px");
+        });
     
         $(window).on('scroll', function () {
            
@@ -215,6 +300,8 @@ jQuery(document).ready(function($){
             }
             /*--sticky menu activation end--*/
             
+            $(".mobile-logo").css("position", "fixed");
+            
             /*--show and hide scroll to top start--*/ 
             var scrollToTop = $('.scroll-to-top a')
             if ($(window).scrollTop() > 500) {
@@ -229,33 +316,6 @@ jQuery(document).ready(function($){
 
 
         /*-- Nguyen Truong Long --*/
-
-
-            $(window).scroll(function() {
-                var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-                $(".fade-scroll").each(function() {
-                  /* Check the location of each desired element */
-                  var objectBottom = $(this).offset().top + $(this).outerHeight();
-
-                  var objectTop = $(this).offset().top;
-                  
-                  /* If the element is completely within bounds of the window, fade it in */
-                  if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-                    if ($(this).css("opacity")==0) {
-                        $(this).animate({ left: "0px", opacity: "1" }, 500);
-                    }
-                  } 
-                  if(objectTop >= windowBottom) {   //object goes out of view (scrolling up)
-                    if ($(this).css("opacity")==1) {
-                      if($(document).width() >= 576) {
-                        $(this).animate({ opacity: "0", left: "50px" }, 500);
-                      } else {
-                        $(this).animate({ opacity: "0", left: "20px" }, 500);
-                      }
-                    }
-                  }
-                });
-              }).scroll(); //invoke scroll-handler on page-load
 
     
     jQuery(window).load(function(){
