@@ -59,7 +59,7 @@
     input[type="text"] {
     width: 46%;
     }
-    .about-me img {
+    .introduction-section img {
     height: 300px;
     /*margin-left: 20px;
     box-shadow: 0 0 5px #ddd;
@@ -142,7 +142,7 @@
     .author-details span {
     margin-top: 0;
     }
-    .my-skill h2 {
+    .my-skills h2 {
     text-align: center;
     }
 
@@ -190,11 +190,11 @@
       margin-bottom: 50px;
     }
     .my-hobbies,
-    .my-skill {
+    .my-skills {
         padding-top: 20px;
       /*display: none;*/
     }
-    .about-me img {
+    .introduction-section img {
     display: none;
     /*height: 285px;
     margin-left: 20%;*/
@@ -260,15 +260,15 @@
     .mobile-padding-top-50 {
     /*display: none;*/
     }
-    .my-skill {
+    .my-skills {
     padding: 20px;
     padding-top: 20px;
     }
-    .about-myself {
+    .personal-info {
     padding: 20px;
     }
 
-    .about-me img {
+    .introduction-section img {
         max-width: 80%;
         margin: 20px;
     }
@@ -350,7 +350,7 @@
     margin: 0;
     width: 100%;
     }
-    .about-me img {
+    .introduction-section img {
     display: none;
     }
     .mobile-logo.active {
@@ -498,7 +498,7 @@
     .load-more-post .boxed-btn {
     display: none;
     }
-    .my-skill {
+    .my-skills {
       text-align: center;
     }
     .left-content {
@@ -525,15 +525,15 @@
     margin-left: 0;
     padding-bottom: 28px;
     }
-    .about-myself .boxed-btn {
+    .personal-info .boxed-btn {
       margin-left: 0;
     }
 
-    .left-title {
+    .category {
         font-size: 15px !important;
     }
 
-    .right-title {
+    .detail {
         font-size: 15px !important;
     }
     .single-team-member {
@@ -583,7 +583,7 @@
     display: block;
     margin-bottom: 0;
     }
-        .about-me img {
+        .introduction-section img {
     display: none;
     }
     .section-title.sample-page h1 {
@@ -608,7 +608,7 @@
     .comment-form input[type="submit"] {
     margin-left: 0px;
     }
-    #about-me {
+    #introduction-section {
     padding-bottom: 40px;
     }
     #what-i-do {
