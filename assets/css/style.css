@@ -8,7 +8,7 @@ Css Indexing
 -----------------
 * Menu-area CSS
 -----------------
-* About-Me Area CSS 
+* introduction-section Area CSS 
 -----------------
 * Working Experience Css 
 -----------------
@@ -159,7 +159,7 @@ a:hover {
     line-height: 26px;
 }
 
-#about-me .section-title p {
+#introduction-section .section-title p {
     text-align: center;
 }
 
@@ -191,10 +191,10 @@ a:hover {
     text-transform: uppercase;
 }
 
-.about-myself, .my-skill {
+.personal-info, .my-skills {
     padding-bottom: 10px;
 }
-.about-myself .section-title h4, .my-skill .section-title h4 {
+.personal-info .section-title h4, .my-skills .section-title h4 {
     text-decoration: underline;
     text-decoration-style: double;
     text-decoration-color: #1ABC9C;
@@ -462,33 +462,33 @@ li.active a {
     opacity: 1;
 }
 /*===================
-About-Me Area CSS 
+introduction-section Area CSS 
 ====================*/
-.my-skill {
+.my-skills {
     /*margin-left: -10px;*/
 }
-#about-me {
+#introduction-section {
     padding-bottom: 77px;
 }
-.prog-item:first-child p {
+.skill-item:first-child p {
     margin-top: 0;
 }
-.about-myself p:nth-child(1) {
+.personal-info p:nth-child(1) {
    font-size: 18px;
     font-weight: 400;
     text-align: justify;
 }
-.about-myself .boxed-btn {
+.personal-info .boxed-btn {
     margin-top: 30px;
     margin-left: -2px;
 }
-.left-title {
+.category {
     font-size: 16px;
     padding-bottom: 5px;
     font-weight: 600;
     color: #1ABC9C;
 }
-.about-me img {
+.introduction-section img {
     /*border-radius: 5px;*/
     border-radius: 50%;
     box-shadow: 0 0 8px #777;
@@ -498,7 +498,7 @@ About-Me Area CSS
     margin-right: auto;
 }
 
-.right-title {
+.detail {
     float: right;
     padding-bottom: 5px;
     font-size: 16px;
@@ -506,12 +506,12 @@ About-Me Area CSS
     color: #333;
 }
 
-.about-myself p {
+.personal-info p {
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
 }
 
-.about-myself p span {
+.personal-info p span {
     vertical-align: middle !important;
 }
 
@@ -520,7 +520,7 @@ About-Me Area CSS
     background: #ddd !important;
 }
 
-.progressive-bar p {
+.skill-list p {
     font-size: 20px;
     font-weight: 400;
 }
@@ -535,7 +535,7 @@ About-Me Area CSS
     margin: 0;
     padding: 0;
 }
-.prog-item p {
+.skill-item p {
     font-size: 16px;
     font-weight: 600;
     margin-top: 25px;
