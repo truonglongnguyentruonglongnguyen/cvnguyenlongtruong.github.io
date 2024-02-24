@@ -96,6 +96,14 @@
               height: '5px',
               radius: '15px'
           });
+          var systemDesign = $('#system-design');    
+          systemDesign.LineProgressbar({
+              ShowProgressCount: false,
+              percentage: 100,
+              fillBackgroundColor: '#1abc9c',
+              height: '5px',
+              radius: '15px'
+          });
           var programmingLanguage = $('.programming-language');    
           programmingLanguage.LineProgressbar({
               ShowProgressCount: false,
