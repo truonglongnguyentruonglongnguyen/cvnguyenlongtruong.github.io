@@ -194,7 +194,7 @@ a:hover {
 .personal-info, .my-skills {
     padding-bottom: 10px;
 }
-.personal-info .section-title h4, .my-skills .section-title h4 {
+.personal-info .section-title h4, .my-skill .section-title h4 {
     text-decoration: underline;
     text-decoration-style: double;
     text-decoration-color: #1ABC9C;
