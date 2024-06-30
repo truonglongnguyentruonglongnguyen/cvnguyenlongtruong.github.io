@@ -191,10 +191,10 @@ a:hover {
     text-transform: uppercase;
 }
 
-.personal-information, .my-skills {
+.personal-information, .my-skill {
     padding-bottom: 10px;
 }
-.personal-information .section-title h4, .my-skills .section-title h4 {
+.personal-information .section-title h4, .my-skill .section-title h4 {
     text-decoration: underline;
     text-decoration-style: double;
     text-decoration-color: #1ABC9C;
@@ -464,7 +464,7 @@ li.active a {
 /*===================
 introduction-section Area CSS 
 ====================*/
-.my-skills {
+.my-skill {
     /*margin-left: -10px;*/
 }
 #introduction-section {
@@ -538,8 +538,9 @@ introduction-section Area CSS
 .skill-item p {
     font-size: 16px;
     font-weight: 600;
-    margin-top: 25px;
     color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
 }
 .my-hobbies li {
     display: inline-block;
