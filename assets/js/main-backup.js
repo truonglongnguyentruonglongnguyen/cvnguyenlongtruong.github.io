@@ -290,8 +290,8 @@
                       $( this ).outerHeight(maxElementBlogContentHeight + 80);
                   });
   
-                  var initialHeighttitle-header = $(".header-section .title-header").first().outerHeight();
-                  $(".header-section .title-header").css("min-height", initialHeighttitle-header + "px");
+                  var initialHeightTitleHeader = $(".header-section .title-header").first().outerHeight();
+                  $(".header-section .title-header").css("min-height", initialHeightTitleHeader + "px");
           });
       
           $(window).on('scroll', function () {
