@@ -68,15 +68,15 @@
         });
 
         // Progress bars activation
-        activateProgressBar('#dsa');
-        activateProgressBar('#system-design');
-        activateProgressBar('.programming-language');
-        activateProgressBar('#database');
-        activateProgressBar('#ai');
-        activateProgressBar('#analytical-skills');
-        activateProgressBar('#problem-solving-skills');
-        activateProgressBar('#strong-collaboration-skills');
-        activateProgressBar('#agile-skills');
+        // activateProgressBar('#dsa');
+        // activateProgressBar('#system-design');
+        // activateProgressBar('.programming-language');
+        // activateProgressBar('#database');
+        // activateProgressBar('#ai');
+        // activateProgressBar('#analytical-skills');
+        // activateProgressBar('#problem-solving-skills');
+        // activateProgressBar('#strong-collaboration-skills');
+        // activateProgressBar('#agile-skills');
 
         // Function to activate progress bars
         function activateProgressBar(selector) {
