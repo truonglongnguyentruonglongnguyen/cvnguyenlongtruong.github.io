@@ -26,7 +26,7 @@
   
           $(document).bind('keydown', 'ctrl+s', function(){$('#save').click(); return false;});
           */
-          $(document).on('click','.Switcher',function(){
+          $(document).on('click','.theme-switcher',function(){
               var cname = $(this).attr('class');
               var length = cname.length;
               if(length == 8){
@@ -193,7 +193,7 @@
       /*--portfolio filter menu active selector end--*/
       
           /*--testimonial carousel slider activation start--*/
-          var testimonialCarousel = $('.testimonial-carousel');
+          var testimonialCarousel = $('.carousel-testimonial');
           testimonialCarousel.owlCarousel({
               center:true,
               loop:true,
@@ -231,7 +231,7 @@
       
       
           /*-- Headertyping effect activatioin start--*/
-          var typed = new Typed('.htitle', {
+          var typed = new Typed('.title-header', {
             strings: ['TRUONG <span>LONG</span>', 'WEB <span>BACKEND</span>', 'SOFTWARE <span>ENGINEER</span>'],
             typeSpeed: 50,
             backSpeed: 60,
@@ -252,16 +252,16 @@
                       }).get());
                   }
   
-                  $(".single-work-item > div.row").each(function() {
+                  $(".work-item > div.row").each(function() {
                       let elementHeight = $(this).outerHeight() - 15;
                       if ($(document).width() > 767) {
                           $(this).children( "div.row > div:first" ).css("cssText", "height: " + elementHeight + "px !important;");
                       }
                   });
   
-                  let allElementBlogContent = $("#blog .post-content");
+                  let allElementBlogContent = $("#blog .content-post");
                   let maxElementBlogContentHeight = getMaxHeight(allElementBlogContent);
-                  $("#blog .single-blog-post").each(function() {
+                  $("#blog .blog-post").each(function() {
                       $( this ).outerHeight(maxElementBlogContentHeight + 80);
                   });
   
@@ -269,7 +269,7 @@
   
           $(window).on('resize', function () {
   
-                  $(".single-work-item > div.row").each(function() {
+                  $(".work-item > div.row").each(function() {
                       $(this).children( "div.row > div:first" ).css("cssText", "height: '' !important;");
                       let elementHeight = $(this).outerHeight() - 15;
                       if ($(document).width() > 767) {
@@ -284,20 +284,20 @@
                       }).get());
                   }
   
-                  let allElementBlogContent = $("#blog .post-content");
+                  let allElementBlogContent = $("#blog .content-post");
                   let maxElementBlogContentHeight = getMaxHeight(allElementBlogContent);
-                  $("#blog .single-blog-post").each(function() {
+                  $("#blog .blog-post").each(function() {
                       $( this ).outerHeight(maxElementBlogContentHeight + 80);
                   });
   
-                  var initialHeightHtitle = $(".header-section .htitle").first().outerHeight();
-                  $(".header-section .htitle").css("min-height", initialHeightHtitle + "px");
+                  var initialHeighttitle-header = $(".header-section .title-header").first().outerHeight();
+                  $(".header-section .title-header").css("min-height", initialHeighttitle-header + "px");
           });
       
           $(window).on('scroll', function () {
              
               /*--sticky menu activation start--*/
-              var maniNavbar = $('.main-navar');
+              var maniNavbar = $('.main-navbar');
               var mobileLogo = $('.mobile-logo')
               if ($(window).scrollTop() > 300) {
                   maniNavbar.addClass('nav-fixed');
