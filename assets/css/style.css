@@ -191,10 +191,10 @@ a:hover {
     text-transform: uppercase;
 }
 
-.personal-info, .my-skills {
+.personal-information, .my-skills {
     padding-bottom: 10px;
 }
-.personal-info .section-title h4, .my-skill .section-title h4 {
+.personal-information .section-title h4, .my-skills .section-title h4 {
     text-decoration: underline;
     text-decoration-style: double;
     text-decoration-color: #1ABC9C;
@@ -252,7 +252,7 @@ a:hover {
     visibility: hidden;
     opacity: 0;
 }
-.header-section .htitle,
+.header-section .title-header,
 .header-section h6,
 .header-section .go-down{
     z-index: 1;
@@ -273,7 +273,7 @@ a:hover {
 /*==================
 Header-area CSS
 ===================*/
-.main-navar.nav-fixed .logo {
+.main-navbar.nav-fixed .logo {
     line-height: 65px;
 }
 .go-down {
@@ -309,7 +309,7 @@ Header-area CSS
     opacity: .7;
     z-index: -1;
 }
-.header-section .htitle {
+.header-section .title-header {
     color: #fff;
     font-size: 90px;
     font-weight: 900;
@@ -319,7 +319,7 @@ Header-area CSS
     min-height: 99px;
 }
 
-.header-section .htitle span {
+.header-section .title-header span {
     color: #1ABC9C;
 }
 .header-section.header-bg.blog-page{
@@ -366,7 +366,7 @@ Menu-area CSS
 .slicknav_menu{
     display: none;
 }
-.main-navar {
+.main-navbar {
     background: #2A2B2C;
     display: none;
 }
@@ -389,18 +389,18 @@ Menu-area CSS
     color: #1ABC9C;
 }
 
-.main-navar ul {
+.main-navbar ul {
     margin: 0;
     padding: 0;
 }
 
-.main-navar li {
+.main-navbar li {
     display: inline-block;
     padding: 23px 10px;
     position: relative;
 }
 
-.main-navar li a {
+.main-navbar li a {
     color: #fff;
     text-align: right;
     text-transform: uppercase;
@@ -414,13 +414,13 @@ Menu-area CSS
     position: relative;
 }
 
-.main-navar li a:hover {
+.main-navbar li a:hover {
     color: #1ABC9C;
 }
 li.active a {
     color: #1ABC9C;
 }
-.main-navar.nav-fixed {
+.main-navbar.nav-fixed {
     position: fixed;
     left: 0;
     top: 0;
@@ -429,16 +429,16 @@ li.active a {
     background: rgba(0,0,0,0.8);
     display: block;
 }
-.main-navar li a:focus {
+.main-navbar li a:focus {
     text-decoration: none;
 }
-.main-navar ul li a {
+.main-navbar ul li a {
     position: relative;
 }
 .menu-bar.blog li.active a{
     color: #fff !important;
 }
-.main-navar ul li a:after {
+.main-navbar ul li a:after {
     position: absolute;
     left: 0;
     bottom: -5px;
@@ -456,7 +456,7 @@ li.active a {
     transition: all 1s ease 0s;
 }
 
-.main-navar li.active a:after {
+.main-navbar li.active a:after {
     visibility: visible;
     z-index: 2;
     opacity: 1;
@@ -473,12 +473,12 @@ introduction-section Area CSS
 .skill-item:first-child p {
     margin-top: 0;
 }
-.personal-info p:nth-child(1) {
+.personal-information p:nth-child(1) {
    font-size: 18px;
     font-weight: 400;
     text-align: justify;
 }
-.personal-info .boxed-btn {
+.personal-information .boxed-btn {
     margin-top: 30px;
     margin-left: -2px;
 }
@@ -506,12 +506,12 @@ introduction-section Area CSS
     color: #333;
 }
 
-.personal-info p {
+.personal-information p {
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
 }
 
-.personal-info p span {
+.personal-information p span {
     vertical-align: middle !important;
 }
 
@@ -651,7 +651,7 @@ Working Experience Css
     font-weight: 500;
     margin-bottom: 5px;
 }
-.single-work-item {
+.work-item {
     margin-bottom: 20px;
 }
 .right-content h4 {
@@ -673,7 +673,7 @@ Working Experience Css
     text-align: left;
 } /*add new*/
 
-.single-work-item:last-child {
+.work-item:last-child {
     border-bottom: none;
 }
 /*========================
@@ -1021,7 +1021,7 @@ span.counter {
 /*===============
 Testimonial Css
 ================*/
-.testimonial-carousel {
+.carousel-testimonial {
     margin-top: -31px;
 }
 .testimonial-section .section-title{
@@ -1030,7 +1030,7 @@ Testimonial Css
 .testimonial-section{
 background-color: #f5f5f5;
 }
-.testimonial-text {
+.testimonial-content {
     margin: 10px;
     font-weight: 400;
     font-size: 15px;
@@ -1045,20 +1045,20 @@ background-color: #f5f5f5;
 
 }
 
-.testimonial-text i {
+.testimonial-content i {
     font-size: 18px;
     color: #999;
     padding-top: 14px;
     
 }
-.testimonial-text p {
+.testimonial-content p {
     line-height: 1.4em;
     color:#333;
 }
-.testimonial-bottom img {
+.testimonial-footer img {
     width: 80px;
 }
-.testimonial-bottom {
+.testimonial-footer {
     position: relative;
 }
 
@@ -1077,12 +1077,12 @@ background-color: #f5f5f5;
     font-size: 14px;
     color: #999999;
 }
-.testimonial-carousel.owl-carousel 
+.carousel-testimonial.owl-carousel 
 .owl-item img {
     width: 80px;
     height: 80px;
 }
-.testimonial-text:after {
+.testimonial-content:after {
     position: absolute;
     width: 0;
     height: 0;
@@ -1101,10 +1101,10 @@ background-color: #f5f5f5;
         transition-delay: .3s;
 
 }
-.owl-item.active.center .testimonial-text,
-.owl-item.active.center .testimonial-text i ,
-.single-testimonial-item:hover .testimonial-text,
-.single-testimonial-item:hover .testimonial-text i {
+.owl-item.active.center .testimonial-content,
+.owl-item.active.center .testimonial-content i ,
+.testimonial-item:hover .testimonial-content,
+.testimonial-item:hover .testimonial-content i {
     background: #1ABC9C;
     color: #fff;
     -webkit-transition-delay: .3s;
@@ -1114,13 +1114,13 @@ background-color: #f5f5f5;
         transition-delay: .3s;
 
 }
-.owl-item.active.center .testimonial-text:after,
-.single-testimonial-item:hover .testimonial-text:after{
+.owl-item.active.center .testimonial-content:after,
+.testimonial-item:hover .testimonial-content:after{
     visibility: visible;
     opacity: 1;
     
 }
-.owl-item.active.center .testimonial-text p {
+.owl-item.active.center .testimonial-content p {
     color:#fff;
 }
 .owl-dots div {
@@ -1137,7 +1137,7 @@ background-color: #f5f5f5;
   text-align: center;
   margin-top: 20px;
 }
-.single-testimonial-item {
+.testimonial-item {
     font-weight: 800;
 }
 /*===============
@@ -1146,12 +1146,12 @@ Blog section Css
 #portfolio {
     padding-bottom: 50px;
 }
-.single-blog-post:hover{
+.blog-post:hover{
      -webkit-box-shadow: 0 0 15px #999;
    -moz-box-shadow: 0 0 15px #999;
         box-shadow: 0 0 15px #999;
 }
-.single-blog-post:hover h3{
+.blog-post:hover h3{
     color: #1ABC9C;
 }
 .post-thumb-1{
@@ -1198,7 +1198,7 @@ Blog section Css
     display: block;
     max-width: 100%;
 }
-#portfolio .single-blog-post{
+#portfolio .blog-post{
     -webkit-box-shadow: 0 0 5px #ddd;
    -moz-box-shadow: 0 0 5px #ddd;
         box-shadow: 0 0 5px #ddd;
@@ -1208,11 +1208,11 @@ Blog section Css
     height: 100% !important;
     position: relative;
 }
-.post-content {
+.content-post {
     padding:10px 20px 0px 20px;
     overflow: hidden;
 }
-.post-content h3 {
+.content-post h3 {
     font-size: 18px;
     font-weight: 500;
     line-height: 1.5;
@@ -1220,35 +1220,35 @@ Blog section Css
     padding-top: 10px;
 }
 
-.post-content p {
+.content-post p {
     font-weight: 400;
     line-height: 1.5em;
     margin-bottom: 0;
 }
 
-.post-botom {
+.post-footer {
     padding: 20px;
     width: 100%;
     bottom: 10px;
     position: absolute;
 }
 
-.post-botom a {
+.post-footer a {
     display: inline-block;
     padding-right: 20px;
     font-size: 14px;
     font-weight: 400;
 }
 
-.post-botom .project-and-demo {
+.post-footer .project-and-demo {
     padding-bottom: 10px;
 }
 
-.post-botom i {
+.post-footer i {
     padding-right: 5px;
     color: #1ABC9C;
 }
-.read-more-btn {
+.btn-read-more {
     padding: 5px 10px;
     background: #1ABC9C;
     border-radius: 3px;
@@ -1264,7 +1264,7 @@ Blog section Css
     /*float: right;*/
     
 }
-.read-more-btn:hover {
+.btn-read-more:hover {
     color: #fff;
     -webkit-box-shadow: 0px 2px 11px 2px #999; 
     -moz-box-shadow: 0px 2px 11px 2px #999; 
@@ -1281,7 +1281,7 @@ Blog section Css
     padding-bottom: 20px;
 }
 
-.single-post-content h2 {
+.single-content-post h2 {
     font-weight: 600;
     line-height: 1.5;
     padding-bottom: 10px;
@@ -1306,12 +1306,12 @@ rating p {
 .rating i {
     color: #FE6000;
 }
-.single-post-content p {
+.single-content-post p {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.8;
 }
-.single-post-content p:nth-child(5) {
+.single-content-post p:nth-child(5) {
     padding-top: 30px;
 }
 
@@ -1430,7 +1430,7 @@ rating p {
    -moz-box-shadow: 0 0 0 5px  #ddd;
         box-shadow: 0 0 0 5px  #ddd;  
 }
-.single-post-content p:nth-child(1) {
+.single-content-post p:nth-child(1) {
     margin: 0;
     padding: 0;
     display: inline-block;
@@ -1582,7 +1582,7 @@ Footer section Css
 /*===========
 Swhitcher Css
 ============*/
-.Switcher:after {
+.theme-switcher:after {
    position: absolute;
     width: 60px;
     height: 56px;
@@ -1596,7 +1596,7 @@ Swhitcher Css
     border-radius: 5px;
 }
 
-.Switcher i {
+.theme-switcher i {
     position: absolute;
     left: -40px;
     z-index: 2;
@@ -1606,10 +1606,10 @@ Swhitcher Css
     color: #999;
     top: 11px;
 }
-.Switcher.active{
+.theme-switcher.active{
     right: 0px;
 }
-.Switcher {
+.theme-switcher {
     position: fixed;
     right: -173px;
     top: 150px;
@@ -1623,16 +1623,16 @@ Swhitcher Css
     border-radius: 5px;
     padding: 20px;
 }
-.Switcher h5 {
+.theme-switcher h5 {
     font-size: 18px;
     font-weight: 600;
     padding-bottom: 20px;
 }
-.Switcher ul {
+.theme-switcher ul {
     padding: 0;
     margin: 0;
 }
-.Switcher li {
+.theme-switcher li {
     display: inline-block;
     list-style: none;
     padding: 0px 5px;
@@ -1859,22 +1859,22 @@ Pre Loader Style
     resize: none;
 }
 
-#blog .single-blog-post {
+#blog .blog-post {
     /*height: 300px !important;*/
     position: relative;
 }
 
-#blog .post-botom {
+#blog .post-footer {
     position: absolute;
     bottom: 10px;
     width: 100%;
 }
 
-#blog .read-more-btn {
+#blog .btn-read-more {
     float: right;
 }
 
-#blog .single-blog-post{
+#blog .blog-post{
     /*-webkit-box-shadow: 0 0 5px #ddd;
    -moz-box-shadow: 0 0 5px #ddd;
         box-shadow: 0 0 5px #ddd;
@@ -1887,7 +1887,7 @@ Pre Loader Style
     position: relative;
 }
 
-.project-resume .resume-title h3 {
+.resume-project .resume-title h3 {
     font-size: 24px;
     line-height: 24px;
     font-weight: 900;
@@ -1898,12 +1898,12 @@ Pre Loader Style
 
 
 
-.project-resume .project-list {
+.resume-project .list-projects {
     position: relative;
 }
 
 
-.project-resume .project-list:after {
+.resume-project .list-projects:after {
     position: absolute;
     content: '';
     width: 2px;
@@ -1914,7 +1914,7 @@ Pre Loader Style
 }
 
 
-.project-resume .resume-title h3 i {
+.resume-project .resume-title h3 i {
     width: 45px;
     height: 45px;
     line-height: 45px;
@@ -1930,7 +1930,7 @@ Pre Loader Style
     margin-right: 5px;
 }
 
-.project-resume .project-list .single-project .project-title .project-name:before {
+.resume-project .list-projects .project-item .title-project .name-project:before {
     position: absolute;
     content: '';
     width: 20px;
@@ -1948,13 +1948,13 @@ Pre Loader Style
 
 
 
-.project-resume .project-list .single-project {
+.resume-project .list-projects .project-item {
     margin-bottom: 30px;
     padding-left: 55px;
 }
 
 
-.project-resume .project-list .single-project .project-title .project-name h4 {
+.resume-project .list-projects .project-item .title-project .name-project h4 {
     line-height: 1.2 !important;
 }
 
@@ -1967,22 +1967,22 @@ Pre Loader Style
     width: 80%;
 }
 
-.project-resume .project-list .single-project .project-content {
+.resume-project .list-projects .project-item .content-project {
     clear: both;
 }
 
-.project-resume .project-list .single-project {
+.resume-project .list-projects .project-item {
     margin-bottom: 30px;
     padding-left: 55px;
 }
 
-.project-resume .project-list .single-project:last-child {
+.resume-project .list-projects .project-item:last-child {
     margin-bottom: 40px;
 }
 
 
 
-.project-resume .project-list .single-project .project-content p {
+.resume-project .list-projects .project-item .content-project p {
     font-size: 14px;
     line-height: 22px;
     font-weight: 400;
@@ -1990,7 +1990,7 @@ Pre Loader Style
 }
 
 
-.project-resume .project-list .single-project .project-content ul li {
+.resume-project .list-projects .project-item .content-project ul li {
     font-size: 14px;
     line-height: 22px;
     font-weight: 400;
