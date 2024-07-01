@@ -1,104 +1,111 @@
-/* Medium Layout: 1280px. */
+/*=========================
+Responsive CSS Styles
+===========================
+1. Medium Layout (1280px)
+2. Tablet Layout (768px)
+3. Mobile Layout (320px)
+4. Wide Mobile Layout (480px)
+=========================*/
+
+/*=========================
+1. Medium Layout (1280px)
+=========================*/
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
     .main-navbar li {
-    padding: 23px 7px;
+        padding: 23px 7px;
     }
     .content-post h3 {
-    font-size: 16px;
-    font-weight: 600;
+        font-size: 16px;
+        font-weight: 600;
     }
     .btn-read-more {
-    display: block;
-    text-align: center;
-    /*margin-top: 20px;*/
+        display: block;
+        text-align: center;
     }
     .comment-content .btn-read-more {
-    width: 100px;
+        width: 100px;
     }
     #video-container {
-    position: absolute;
-    }
-    #video-container {
-        top:0%;
-        left:0%;
-        height:100%;
-        width:100%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        height: 100%;
+        width: 100%;
         overflow: hidden;
     }
     video {
-        position:absolute;
-        z-index:-1;
+        position: absolute;
+        z-index: -1;
     }
     video.fillWidth {
         width: 100%;
     }
-        .sample-image::after {
+    .sample-image::after {
         top: 26px;
         left: 16px;
         width: 95%;
         height: 67%;
     }
     .comment-form textarea {
-    margin: 0;
-    margin-left: 22px;
-    width: 95%;
+        margin: 0;
+        margin-left: 22px;
+        width: 95%;
     }
     .my-hobbies {
-    padding-top: 35px;
-    display: none;
+        padding-top: 35px;
+        display: none;
     }
     .testimonial-footer {
-    margin-left: 35%;
+        margin-left: 35%;
     }
     .testimonial-content::after {
-    left: 37%;
+        left: 37%;
     }
-    .content-post p{
+    .content-post p {
         font-size: 15px;
     }
     input[type="text"] {
-    width: 46%;
+        width: 46%;
     }
     .introduction-section img {
-    height: 300px;
-    /*margin-left: 20px;
-    box-shadow: 0 0 5px #ddd;
-    border-radius: 5px;*/
-    border-radius: 50%;
+        height: 300px;
+        border-radius: 50%;
     }
 }
 
-/* Tablet Layout: 768px. */
+/*=========================
+2. Tablet Layout (768px)
+=========================*/
 @media only screen and (min-width: 768px) and (max-width: 991px) { 
-    .main-navbar.nav-fixed{
-        display: none
+    .main-navbar.nav-fixed {
+        display: none;
     }
     .contact-details {
-    margin-bottom: 35px;
+        margin-bottom: 35px;
     }
     .header-section .title-header {
-    font-size: 50px;
+        font-size: 50px;
     }
     .header-section p {
         font-size: 30px;
     }
     .section-title .title-header span {
-    display: block;
-    padding-top: 20px;
+        display: block;
+        padding-top: 20px;
     }
-    .section-title h1 span.color{
+    .section-title h1 span.color {
         display: inline-block;
     }
-    .psize{
+    .psize {
         width: 45%;
     }
     .blog-post {
-    margin-bottom: 50px;
+        margin-bottom: 50px;
     }
-    .post-thumb{
+    .post-thumb {
         transform: none;
     }
-      .slicknav_menu{
+    .slicknav_menu {
         display: block;
         text-align: center;
         text-transform: uppercase;
@@ -110,136 +117,125 @@
         z-index: 2;
     }
     .slicknav_btn {
-      background: #1ABC9C;
+        background: #1ABC9C;
     }
     .slicknav_nav a:hover {
-      color: #000;
+        color: #000;
     }
     .slicknav_nav li {
-      background: transparent;
+        background: transparent;
     }
     .slicknav_nav li:hover a {
-      background: #ddd;
+        background: #ddd;
     }
     .theme-switcher {
         display: none;
     }
     .pre-loader .spinner {
-    margin-top: 80%;
+        margin-top: 80%;
     }
     .comment-content .btn-read-more {
-    width: 100px;
+        width: 100px;
     }
     input[type="text"] {
-    display: inline-block;
-    width: 92%;
-    float: left;
-    margin-left: 25px;
+        display: inline-block;
+        width: 92%;
+        float: left;
+        margin-left: 25px;
     }
     .author-details span {
-    margin-top: 0;
+        margin-top: 0;
     }
     .my-skills h2 {
-    text-align: center;
+        text-align: center;
     }
-
     .my-hobbies {
-    text-align: center;
+        text-align: center;
     }
-
     .date {
-    font-size: 30px;
+        font-size: 30px;
     }
-    .author-details{
+    .author-details {
         font-size: 16px;
     }
-    .author-details h2 span{
+    .author-details h2 span {
         font-size: 14px;
     }
     textarea {
-    width: 92%;
-    margin-left: 25px;
+        width: 92%;
+        margin-left: 25px;
     }
-       .sample-image::after {
-    top: 26px;
-    left: 16px;
-    width: 95%;
-    height: 67%;
+    .sample-image::after {
+        top: 26px;
+        left: 16px;
+        width: 95%;
+        height: 67%;
     }
     .mobile-logo.active {
-    position: fixed;
+        position: fixed;
     }
     .mobile-logo {
-    display: inline-block;
-    }
-    .mobile-logo.active {
-    position: fixed;
+        display: inline-block;
     }
     .single-team-member {
-    width: 70%;
-    margin-left: 15%;
-    margin-bottom: 50px;
-    }
-
-    .single-team-member {
-      width: 70%;
-      margin-left: 15%;
-      margin-bottom: 50px;
+        width: 70%;
+        margin-left: 15%;
+        margin-bottom: 50px;
     }
     .my-hobbies,
     .my-skills {
         padding-top: 20px;
-      /*display: none;*/
     }
     .introduction-section img {
-    display: none;
-    /*height: 285px;
-    margin-left: 20%;*/
+        display: none;
     }
     .right-content p {
-    font-size: 14px;
-    text-align: left;
-    padding-bottom: 20px;
+        font-size: 14px;
+        text-align: left;
+        padding-bottom: 20px;
     }
     .testimonial-footer {
-    margin-left: 35%;
+        margin-left: 35%;
     }
     .testimonial-content::after {
-    left: 37%;
+        left: 37%;
     }
     .content-post p {
-    font-size: 14px;
+        font-size: 14px;
     }
     input.subject {
-    width: 27% !important;
+        width: 27% !important;
     }
     .team-section {
-    padding-bottom: 30px;
+        padding-bottom: 30px;
     }
-    .single-team-wrapper.bottom{
+    .single-team-wrapper.bottom {
         margin-top: 0;
     }
-    .happy-clients{
+    .happy-clients {
         padding: 0;
         padding-top: 78px;
     }
 }
-/* Mobile Layout: 320px. */
+
+/*=========================
+3. Mobile Layout (320px)
+=========================*/
 @media only screen and (max-width: 767px) { 
     .comment-content .btn-read-more {
-    width: 100px;
+        width: 100px;
     }
-    .main-navbar.nav-fixed{
-        display: none
+    .main-navbar.nav-fixed {
+        display: none;
     }
     .header-section .title-header {
-    font-size: 40px;
+        font-size: 40px;
     }
     .section-title .title-header span {
-    display: block;
-    padding-top: 20px;
+        display: block;
+        padding-top: 20px;
     }
-    .section-title h1 span.color{
+    .section-title h1 span.color {
         display: inline-block;
     }
     .header-section p {
@@ -248,41 +244,39 @@
     input[type="submit"] {
         margin: 20px;
     }
-    .post-thumb{
+    .post-thumb {
         transform: none;
     }
-    .mobile-marign-bottom-30{
+    .mobile-marign-bottom-30 {
         margin-bottom: 30px;
     }
     .mobile-padding-top-50 {
-    /*display: none;*/
     }
     .my-skills {
-    padding: 20px;
-    padding-top: 20px;
+        padding: 20px;
+        padding-top: 20px;
     }
     .personal-information {
-    padding: 20px;
+        padding: 20px;
     }
-
     .introduction-section img {
         max-width: 80%;
         margin: 20px;
     }
-        .company-info {
+    .company-info {
         text-align: left;
     }
-    .psize{
-         width: 80%;
-         margin: 20px;
-     }
-     .blog-post{
-          margin-bottom: 50px;
-      }
-      .contact-details {
+    .psize {
+        width: 80%;
+        margin: 20px;
+    }
+    .blog-post {
+        margin-bottom: 50px;
+    }
+    .contact-details {
         margin-bottom: 30px;
-     }
-    .slicknav_menu{
+    }
+    .slicknav_menu {
         display: block;
         text-align: center;
         text-transform: uppercase;
@@ -295,99 +289,94 @@
         opacity: 0.6;
     }
     .slicknav_btn {
-      background: #1ABC9C;
+        background: #1ABC9C;
     }
     .slicknav_nav a:hover {
-      color: #000;
+        color: #000;
     }
     .slicknav_nav li {
-      background: transparent;
+        background: transparent;
     }
     .slicknav_nav li:hover a {
-      background: #ddd;
+        background: #ddd;
     }
     .theme-switcher {
         display: none;
     }
     .pre-loader .spinner {
-    margin-top: 80%;
+        margin-top: 80%;
     }
     input[type="text"] {
-    display: inline-block;
-    width: 92%;
-    float: left;
-    margin-left: 25px;
+        display: inline-block;
+        width: 92%;
+        float: left;
+        margin-left: 25px;
     }
     .author-details span {
-    margin-top: 0;
+        margin-top: 0;
     }
-    .sample-image:after {
-    top: 31px;
-    left: 75px;
-    width: 74%;
-    }
-    .sample-image:after {
-    top: 31px;
-    left: 75px;
-    width: 74%;
+    .sample-image::after {
+        top: 31px;
+        left: 75px;
+        width: 74%;
     }
     .single-content-post h2 {
-      font-size: 20px;
+        font-size: 20px;
     }
     .single-post-meta-tag a {
-      padding-bottom: 0;
+        padding-bottom: 0;
     }
     .single-post-meta-tag {
-      padding-bottom: 50px;
+        padding-bottom: 50px;
     }
     .single-content-post p {
-      line-height: 1.9em;
+        line-height: 1.9em;
     }
     .comment-form textarea {
-    margin: 0;
-    width: 100%;
+        margin: 0;
+        width: 100%;
     }
     .introduction-section img {
-    display: none;
+        display: none;
     }
     .mobile-logo.active {
-    position: fixed;
+        position: fixed;
     }
     .mobile-logo {
-    display: inline-block;
-    }
-    .mobile-logo.active {
-    position: fixed;
+        display: inline-block;
     }
     .single-post-meta-tag {
-      display: none;
+        display: none;
     }
     .comment-replay {
-      display: none;
+        display: none;
     }
     .comment-form input[type="submit"] {
-    margin-left: 0px;
+        margin-left: 0px;
     }
     .single-social-share {
-    padding-top: 20px;
+        padding-top: 20px;
     }
-    .section-title h2{
+    .section-title h2 {
         font-size: 25px;
     }
 }
-/* Wide Mobile Layout: 480px. */
+
+/*=========================
+4. Wide Mobile Layout (480px)
+=========================*/
 @media only screen and (max-width: 480px) { 
-        .header-section .title-header {
+    .header-section .title-header {
         font-size: 29px;
     }
-    .header-section h6{
-        font-size: 28px
+    .header-section h6 {
+        font-size: 28px;
     }
     .my-hobbies li {
-      padding: 0 10px;
-      margin-top: 30px;
+        padding: 0 10px;
+        margin-top: 30px;
     }
-        .section-title h1 {
+    .section-title h1 {
         font-size: 22px;
         line-height: 12px;
     }
@@ -395,22 +384,19 @@
         padding-bottom: 10px;
         font-size: 14px;
     }
-        #working-experience {
-            /*display: none;*/
-        }
-        .section-padding {
-            padding: 50px 0;
-        }
-        .portfolio-menu ul li {
+    .section-padding {
+        padding: 50px 0;
+    }
+    .portfolio-menu ul li {
         padding: 4px 2px;
     }
-        .btn-read-more {
+    .btn-read-more {
         display: block;
     }
-        .post-footer {
+    .post-footer {
         text-align: center;
     }
-    .slicknav_menu{
+    .slicknav_menu {
         display: block;
         text-align: center;
         text-transform: uppercase;
@@ -422,204 +408,201 @@
         z-index: 2;
     }
     .slicknav_btn {
-      background: #1ABC9C;
+        background: #1ABC9C;
     }
     .slicknav_nav a:hover {
-      color: #000;
+        color: #000;
     }
     .slicknav_nav li {
-      background: transparent;
+        background: transparent;
     }
     .slicknav_nav li:hover a {
-      background: #ddd;
+        background: #ddd;
     }
     .theme-switcher {
         display: none;
     }
     .section-title h1 span {
-    display: block;
-    margin-top: 30px;
+        display: block;
+        margin-top: 30px;
     }
     .pre-loader .spinner {
-    margin-top: 80%;
+        margin-top: 80%;
     }
     .comment-form input[type=text] {
-    width: 100%;
-    margin-left: 0;
+        width: 100%;
+        margin-left: 0;
     }
     .user-thumb {
-    position: inherit;
-    display: block;
-    margin-bottom: 20px;
+        position: inherit;
+        display: block;
+        margin-bottom: 20px;
     }
     .comment-content {
-    padding: 10px 0;
-    width: 80%;
+        padding: 10px 0;
+        width: 80%;
     }
     .single-comment-replay {
-    margin: 200px 0;
+        margin: 200px 0;
     }
     .sample-image::after {
-    top: 24px;
-    left: 39px;
-    width: 76%;
-    height: 58%;
+        top: 24px;
+        left: 39px;
+        width: 76%;
+        height: 58%;
     }
-
     .section-title.sample-page h1 {
-      font-size: 18px;
-      line-height: 1.5;
+        font-size: 18px;
+        line-height: 1.5;
     }
     .sample-page h4 a {
-    font-size: 28px;
+        font-size: 28px;
     }
     input[type="text"] {
-    display: inline-block;
-    width: 92%;
-    float: left;
-    margin-left: 25px;
+        display: inline-block;
+        width: 92%;
+        float: left;
+        margin-left: 25px;
     }
     .content-post p,
     .service-content p,
     .count-text {
-    font-size: 14px;
+        font-size: 14px;
     }
-
     .author-details span {
-    margin-top: 0;
+        margin-top: 0;
     }
     textarea {
-    width: 92%;
-    margin-left: 24px;
+        width: 92%;
+        margin-left: 24px;
     }
     .load-more-post .boxed-btn {
-    display: none;
+        display: none;
     }
     .my-skills {
-      text-align: center;
+        text-align: center;
     }
     .left-content {
-      text-align: center;
+        text-align: center;
     }
     .left-content::after {
-      display: none;
+        display: none;
     }
     .company-info {
-      text-align: center;
+        text-align: center;
     }
     .right-content {
-      text-align: center;
+        text-align: center;
     }
     .right-content p {
-      line-height: 2.2em;
-      padding: 20px;
+        line-height: 2.2em;
+        padding: 20px;
     }
     .contact-details {
-      text-align: center;
+        text-align: center;
     }
     .author-details {
-    position: relative;
-    margin-left: 0;
-    padding-bottom: 28px;
+        position: relative;
+        margin-left: 0;
+        padding-bottom: 28px;
     }
     .personal-information .boxed-btn {
-      margin-left: 0;
+        margin-left: 0;
     }
-
     .category {
         font-size: 15px !important;
     }
-
     .detail {
         font-size: 15px !important;
     }
     .single-team-member {
-    margin-bottom: 50px;
-    width: 70%;
-    margin-left: 15%;
-      }
+        margin-bottom: 50px;
+        width: 70%;
+        margin-left: 15%;
+    }
     .footer-area p {
-      font-size: 14px;
+        font-size: 14px;
     }
     .portfolio-menu {
-    display: none;
-    }
-    .mobile-logo {
-    display: inline-block;
-    }
-    .portfolio-item {
-      margin-left: 7%;
-    }
-    .mobile-logo.active {
-    position: fixed;
-    }
-    input[type="submit"] {
-    margin-left: 25px;
-    }
-    .scroll-to-top i{
         display: none;
     }
-    .what-i-do .section-title p,.team-section .section-title p {
-    padding-bottom: 20px;
+    .mobile-logo {
+        display: inline-block;
+    }
+    .portfolio-item {
+        margin-left: 7%;
+    }
+    .mobile-logo.active {
+        position: fixed;
+    }
+    input[type="submit"] {
+        margin-left: 25px;
+    }
+    .scroll-to-top i {
+        display: none;
+    }
+    .what-i-do .section-title p,
+    .team-section .section-title p {
+        padding-bottom: 20px;
     } 
     .content-post h3 {
-    font-size: 15px;
-    padding-top: 10px;
+        font-size: 15px;
+        padding-top: 10px;
     }
     .carousel-testimonial.owl-carousel .owl-item img {
-    margin-left: 39%;
+        margin-left: 39%;
     }
     .testimonial-content::after {
-    margin-left: 42%;
+        margin-left: 42%;
     }
-    .testimonial-footer .author-details{
+    .testimonial-footer .author-details {
         margin: 5px auto;
         text-align: center;
     }
     .portfolio-menu ul li {
-    display: block;
-    margin-bottom: 0;
+        display: block;
+        margin-bottom: 0;
     }
-        .introduction-section img {
-    display: none;
+    .introduction-section img {
+        display: none;
     }
     .section-title.sample-page h1 {
-          font-size: 18px;
-          line-height: 1.5;
-        }
+        font-size: 18px;
+        line-height: 1.5;
+    }
     .sample-page h4 a {
-            font-size: 28px;
-        }
+        font-size: 28px;
+    }
     .sample-image::after {
-    top: 24px;
-    left: 39px;
-    width: 76%;
-    height: 58%;
+        top: 24px;
+        left: 39px;
+        width: 76%;
+        height: 58%;
     }
     .single-post-meta-tag {
-      display: none;
+        display: none;
     }
     .comment-replay {
-      display: none;
+        display: none;
     }
     .comment-form input[type="submit"] {
-    margin-left: 0px;
+        margin-left: 0px;
     }
     #introduction-section {
-    padding-bottom: 40px;
+        padding-bottom: 40px;
     }
     #what-i-do {
-    padding-bottom: 15px;
+        padding-bottom: 15px;
     }
     #team {
-    padding-bottom: 10px;
+        padding-bottom: 10px;
     }
-    #portfolio {
-    padding-bottom: 10px;
+    #project {
+        padding-bottom: 10px;
     }
-    .contact-section .section-title h1, 
-        .contact-section .section-title p {
-            color: #fff;
-            padding-bottom: 40px;
-        }
+    .contact-section .section-title h1,
+    .contact-section .section-title p {
+        color: #fff;
+        padding-bottom: 40px;
+    }
 }
