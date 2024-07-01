@@ -473,6 +473,9 @@ li.active a {
 .company-info {
     text-align: left;
 }
+.company-info h6 {
+    margin-top: 10px;
+}
 .left-content {
     padding: 0px 20px;
     position: relative;
