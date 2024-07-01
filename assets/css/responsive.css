@@ -74,12 +74,12 @@ Responsive CSS Styles
     .my-skill, .personal-information {
         padding: 20px;
     }
-  }
-  
-  /*=========================
-  2. Tablet Layout (768px)
-  =========================*/
-  @media only screen and (min-width: 768px) and (max-width: 991px) { 
+}
+
+/*=========================
+2. Tablet Layout (768px)
+=========================*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
     .main-navbar.nav-fixed {
         display: none;
     }
@@ -222,12 +222,12 @@ Responsive CSS Styles
     .my-skill, .personal-information {
         padding: 20px;
     }
-  }
-  
-  /*=========================
-  3. Mobile Layout (320px)
-  =========================*/
-  @media only screen and (max-width: 767px) { 
+}
+
+/*=========================
+3. Mobile Layout (320px)
+=========================*/
+@media only screen and (max-width: 767px) {
     .comment-content .btn-read-more {
         width: 100px;
     }
@@ -369,12 +369,12 @@ Responsive CSS Styles
     .my-skill, .personal-information {
         padding: 20px;
     }
-  }
-  
-  /*=========================
-  4. Wide Mobile Layout (480px)
-  =========================*/
-  @media only screen and (max-width: 480px) { 
+}
+
+/*=========================
+4. Wide Mobile Layout (480px)
+=========================*/
+@media only screen and (max-width: 480px) {
     .header-section .title-header {
         font-size: 29px;
     }
@@ -553,7 +553,7 @@ Responsive CSS Styles
     .what-i-do .section-title p,
     .team-section .section-title p {
         padding-bottom: 20px;
-    } 
+    }
     .content-post h3 {
         font-size: 15px;
         padding-top: 10px;
@@ -617,5 +617,4 @@ Responsive CSS Styles
     .my-skill, .personal-information {
         padding: 20px;
     }
-  }
-  
+}
