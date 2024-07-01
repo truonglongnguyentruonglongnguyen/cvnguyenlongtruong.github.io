@@ -507,6 +507,9 @@ Responsive CSS Styles
     .right-content h4 {
         text-align: center;
     }
+    .right-content ul li {
+        list-style-type: none;
+    }
     .contact-details {
         text-align: center;
     }
