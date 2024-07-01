@@ -71,12 +71,15 @@ Responsive CSS Styles
         height: 300px;
         border-radius: 50%;
     }
-}
-
-/*=========================
-2. Tablet Layout (768px)
-=========================*/
-@media only screen and (min-width: 768px) and (max-width: 991px) { 
+    .my-skill, .personal-information {
+        padding: 20px;
+    }
+  }
+  
+  /*=========================
+  2. Tablet Layout (768px)
+  =========================*/
+  @media only screen and (min-width: 768px) and (max-width: 991px) { 
     .main-navbar.nav-fixed {
         display: none;
     }
@@ -146,7 +149,7 @@ Responsive CSS Styles
     .author-details span {
         margin-top: 0;
     }
-    .my-skills h2 {
+    .my-skill h2 {
         text-align: center;
     }
     .my-hobbies {
@@ -183,7 +186,7 @@ Responsive CSS Styles
         margin-bottom: 50px;
     }
     .my-hobbies,
-    .my-skills {
+    .my-skill {
         padding-top: 20px;
     }
     .introduction-section img {
@@ -216,12 +219,15 @@ Responsive CSS Styles
         padding: 0;
         padding-top: 78px;
     }
-}
-
-/*=========================
-3. Mobile Layout (320px)
-=========================*/
-@media only screen and (max-width: 767px) { 
+    .my-skill, .personal-information {
+        padding: 20px;
+    }
+  }
+  
+  /*=========================
+  3. Mobile Layout (320px)
+  =========================*/
+  @media only screen and (max-width: 767px) { 
     .comment-content .btn-read-more {
         width: 100px;
     }
@@ -252,7 +258,7 @@ Responsive CSS Styles
     }
     .mobile-padding-top-50 {
     }
-    .my-skills {
+    .my-skill {
         padding: 20px;
         padding-top: 20px;
     }
@@ -360,12 +366,15 @@ Responsive CSS Styles
     .section-title h2 {
         font-size: 25px;
     }
-}
-
-/*=========================
-4. Wide Mobile Layout (480px)
-=========================*/
-@media only screen and (max-width: 480px) { 
+    .my-skill, .personal-information {
+        padding: 20px;
+    }
+  }
+  
+  /*=========================
+  4. Wide Mobile Layout (480px)
+  =========================*/
+  @media only screen and (max-width: 480px) { 
     .header-section .title-header {
         font-size: 29px;
     }
@@ -479,7 +488,7 @@ Responsive CSS Styles
     .load-more-post .boxed-btn {
         display: none;
     }
-    .my-skills {
+    .my-skill {
         text-align: center;
     }
     .left-content {
@@ -605,4 +614,8 @@ Responsive CSS Styles
         color: #fff;
         padding-bottom: 40px;
     }
-}
+    .my-skill, .personal-information {
+        padding: 20px;
+    }
+  }
+  
