@@ -359,13 +359,24 @@ li.active a {
     color: #333;
 }
 .personal-information p {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.personal-information .category, .my-skill .category {
+    flex: 1;
+    font-weight: bold;
+}
+.personal-information .detail, .my-skill .detail {
+    flex: 2;
+}
+.personal-information p {
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
 }
 .personal-information p span {
     vertical-align: middle !important;
 }
-
 .progressbar {
     margin-bottom: 5px;
     background: #ddd !important;
