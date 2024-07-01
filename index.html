@@ -1,1012 +1,250 @@
-<!DOCTYPE html>
+(function ($) {
+    "use strict";
 
-<html lang="en"
-      xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:og="http://ogp.me/ns#"
-      xmlns:fb="https://www.facebook.com/2008/fbml">
-    <head>
-        <meta name="robots" content="noindex,nofollow">
-        <meta name="googlebot" content="noindex,nofollow">
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="Cache-control" content="no-store" />
-        <meta http-equiv="Cache-control" content="must-revalidate"/>
-        <meta http-equiv="Cache-control" content="max-age=0" />
-        <meta http-equiv="Cache-control" content="no-cache" />
-        <meta http-equiv="expires" content="0" />
-        <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
-        <meta http-equiv="Pragma" content="no-cache" />
-        <meta property="og:title" content="Nguyen Truong Long – Personal Portfolio"/>
-        <meta property="og:type" content="website"/>
-        <script src="assets/js/jquery.js"></script>
-        <script>
-//             $(document).ready(function () {
-//             //Disable cut copy paste
-//                 $('body').bind('cut copy paste', function (e) {
-//                     e.preventDefault();
-//                 });
-                
-//                 //Disable mouse right click
-//                 $("body").on("contextmenu",function(e){
-//                     return false;
-//                 });
-//             });
+    // Document ready function
+    $(document).ready(function () {
 
-//             $(document).keydown(function (event) {
-//                 if (event.keyCode == 123) { // Prevent F12
-//                     return false;
-//                 } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
-//                     return false;
-//                 }
-//             });
+        // Theme switcher activation
+        $(document).on('click', '.theme-switcher', function () {
+            var className = $(this).attr('class');
+            var classLength = className.length;
+            if (classLength == 8) {
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        });
 
-//             $(document).bind('keydown', 'ctrl+s', function(){
-//               $('#save').click();
-//               return false;
-//             });
-        </script>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Black+Ops+One|Poppins|Roboto" rel="stylesheet">
-        <meta property="og:url" content="https://curriculumvitae.nguyentruonglong.net"/>
-        <meta property="og:image" content="https://curriculumvitae.nguyentruonglong.net/assets/img/truonglong-cover.jpg"/>
-        <meta property="og:description" content="A personal portfolio is an evidentiary document designed to provide qualitative and quantitative information." />
-        <title>Nguyen Truong Long | Personal Portfolio</title>
-        <!--Favicon add-->
-        <link rel="shortcut icon" type="image/png" href="assets/img/favicon-long.png">
+        // Change stylesheet
+        $(document).on('click', '#colors li', function () {
+            var className = $(this).attr('class');
+            var colorId = className.substr(6);
+            // Implementation for changing stylesheet based on colorId
+            return false;
+        });
 
-        <!--animate Css-->
-        <link href="assets/css/animate.css" rel="stylesheet">
+        // Activate boxed layout
+        $(document).on('click', '.boxed-layout', function () {
+            $('.wide-layout').removeClass('active');
+            $(this).addClass('active');
+            $('.site').addClass('boxed-layout');
+        });
 
+        // Activate wide layout
+        $(document).on('click', '.wide-layout', function () {
+            $('.boxed-layout').removeClass('active');
+            $('.site').removeClass('boxed-layout');
+            $(this).addClass('active');
+        });
 
-        <!--bootstrap Css
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet">-->
+        // Menu active state
+        var menuItems = '#menu-bar li';
+        $(document).on('click', menuItems, function () {
+            $(this).addClass('active');
+            $(this).siblings().removeClass('active');
+        });
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <!--font-awesome Css
-        <link href="assets/css/font-awesome.min.css" rel="stylesheet">-->
+        // WOW.js activation
+        new WOW().init();
 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
-        <!--jquery.lineProgressbar Css-->
-        <link href="assets/css/jquery.lineProgressbar.css" rel="stylesheet">
-        <!--owl.carousel Css-->
-        <link href="assets/css/owl.carousel.css" rel="stylesheet">
-        <!--Slick Nav Css -->
-        <link href="assets/css/slicknav.min.css" rel="stylesheet">
-        <!--Magnific popup Css-->
-        <link href="assets/css/magnific-popup.css" rel="stylesheet">
-        <!--Style Css-->
-        <link href="assets/css/style.css" rel="stylesheet">
-        <!--Responsive Css-->
-        <link href="assets/css/responsive.css" rel="stylesheet">
-        
-    </head>
-    <body >
-    <!--Theme Color Start-->
+        // Project counter activation
+        var counter = $('.counter');
+        counter.counterUp({
+            delay: 100,
+            time: 1000
+        });
 
-    <!--Pre Loader start-->
-    <div class="pre-loader">
-         <div class="spinner">
-              <span class="dot1"></span>
-              <span class="dot2"></span>
-            </div>
-    </div>
-    <!--Pre Loader end-->
-    <div class="site"><!--for boxed Layout start-->
-    <!--Scroll TO Top Start-->
-    <div class="scroll-to-top">
-       <a href="#"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-    </div>
-    <!--Scroll TO Top end-->
-    
-    <!--header section start-->
-            <section class="header-section header-bg">
-                
-                <div id="particles-js"> </div>
-                    <h1 class="title-header"></h1>
-                    <h6> Details below</h6>
-                    <a href="#introduction-section" class="go-down"><i class="fa fa-chevron-down"></i></a>
-            </section>
-     <!--Header section end-->
-     
-      <!--Main navbar section start-->
-       <div class="main-navbar">
-           <div class="container">
-               <div class="row">
-                   <div class="col-md-4">
-                       <a href="#" class="logo">Truong <span>Long</span></a>
-                   </div>
-                   <div class="col-md-8 text-right">
-                       <ul id="menu-bar">
-                           <li class="active"><a href="#">Home</a></li>
-                           <li><a href="#introduction-section">About</a></li>
-                           <li><a href="#working-experience">Experience</a></li>
-                           <li><a href="#project">Project</a></li>
-                           <li><a href="#interest">Interest</a></li>
-                           <li><a href="#blog">Blog</a></li>
-                           <!--<li><a href="#contact">Contact</a></li>-->
-                       </ul>
-                   </div>
-               </div>
-           </div>
-       </div>
-       <!--Main navbar section end-->
-       <!--Mobile Logo-->
-       <a href="#"><h3 class="mobile-logo">Nguyen Truong Long</h3></a>
-        <!-- Introduction Section Start -->
-        <section class="introduction-section section-padding " id="introduction-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
-                        <div class="section-title text-center">
-                            <h2 class="fade-scroll">About Me</h2>
-                            <p class="">Hello, I am a knowledgeable computer science engineer with extensive expertise in programming and computer applications. I have a keen aptitude for rapidly acquiring new knowledge about programming languages, frameworks, libraries, and related areas. Additionally, I possess strong analytical research skills. I am currently seeking a long-term, stable opportunity as a Software Engineer within a technology company to ensure professional growth and stability.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- Personal Information -->
-                    <div class="col-md-4 col-sm-10 col-xs-12 col-md-offset-0 col-sm-offset-1">
-                        <div class="personal-information">
-                            <div class="section-title text-left">
-                                <h4><strong>PERSONAL INFORMATION</strong></h4>
-                            </div>
-                            <p><span class="category">Name:</span><span class="detail">Nguyen Truong Long</span></p>
-                            <p><span class="category">Birth Date:</span><span class="detail">24/03/1996</span></p>
-                            <p><span class="category">Education:</span><span class="detail">Bach Khoa University (2014-2019)</span></p>
-                            <p><span class="category">Major:</span><span class="detail">Computer Science</span></p>
-                            <p><span class="category">Degree:</span><span class="detail">Bachelor of Engineering</span></p>
-                            <p><span class="category">GPA:</span><span class="detail">7.34/10</span></p>
-                            <p><span class="category">Github:</span><span class="detail"><a href="https://github.com/nguyentruonglong" target="_blank">https://github.com/nguyentruonglong</a></span></p>
-                            <p><span class="category">Blog:</span><span class="detail"><a href="https://nguyentruonglong.net" target="_blank">https://nguyentruonglong.net</a></span></p>
-                        </div>
-                    </div>
-                    <!-- Avatar -->
-                    <div class="col-md-4 col-sm-8 col-xs-12">
-                        <img src="assets/img/profile-pic.png" alt="Avatar">
-                    </div>
-                    <!-- Skills -->
-                    <div class="col-md-4 col-sm-10 col-xs-12 col-md-offset-0 col-sm-offset-1">
-                        <div class="my-skill">
-                            <div class="section-title text-left">
-                                <h4><strong>MY SKILLS</strong></h4>
-                            </div>
-                            <div class="skill-list">
-                                <div class="skill-item">
-                                    <p>Data Structures and Algorithms</p>
-                                    <span id="dsa"></span>
-                                </div>
-                                <div class="skill-item">
-                                    <p>System Design</p>
-                                    <span id="system-design"></span>
-                                </div>
-                                <div class="skill-item">
-                                    <p>Python, Django Framework, Django Rest Framework, Flask Framework, Python Celery Task, Python Image Processing, TensorFlow</p>
-                                    <span class="programming-language"></span>
-                                </div>
-                                <div class="skill-item">
-                                    <p>Golang, Gin Web Framework</p>
-                                    <span class="programming-language"></span>
-                                </div>
-                                <div class="skill-item">
-                                    <p>Node.js, React.js, Basic Redux-Saga, React Native, React Native Module, Express.js, Nest.js</p>
-                                    <span class="programming-language"></span>
-                                </div>
-                                <div class="skill-item">
-                                    <p>HTML, CSS, JavaScript</p>
-                                    <span class="programming-language"></span>
-                                </div>
-                                <div class="skill-item">
-                                    <p>Java, Selenium Framework</p>
-                                <span class="programming-language"></span>
-                                </div>
-                                <div class="skill-item">
-                                    <p>Relational Database Concepts & SQL</p>
-                                    <span id="database"></span>
-                                </div>
-                                <div class="skill-item">
-                                    <p> Artificial Intelligence & Deep Learning</p>
-                                    <span id="ai"></span>
-                                </div>
-                                <div class="skill-item">
-                                    <p>Analytical & Problem-solving skills</p>
-                                    <span id="problem-solving-skills"></span>
-                                </div>
-                                <div class="skill-item">
-                                    <p>Strong collaboration skills</p>
-                                    <span id="strong-collaboration-skills"></span>
-                                </div>
-                                <div class="skill-item">
-                                    <p>Skills for Agile & Scrum Teams</p>
-                                    <span id="agile-skills"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Introduction Section End -->
-       
-        <!--Working Experience Area start-->
-        <section class="section-padding" id="working-experience">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <div class="section-title text-center">
-                            <h2 class="fade-scroll">Working Experience</h2>
-                            <p class=""></p>
-                        </div>
-                    </div>
-                </div>
+        // SlickNav responsive navbar activation
+        var slickNavMenu = $('#menu-bar');
+        slickNavMenu.slicknav();
 
-                <div class="work-item">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-4 col-xs-10 col-xs-push-1">
-                            <div class="left-content">
-                                <p class="date">NOW<br><span>01/2023</span></p>
-                                <div class="company-info">
-                                    <h4></h4>
-                                    <h6>Engaging in Self-Improvement During the Hiring Freeze Period
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-8 col-sm-7 col-xs-10 col-xs-push-1">
-                            <div class="right-content">
-                                <h4>ACCUMULATED EXPERIENCE</h4>
-                                <p>
-                                    <ul>
-                                        <li>Participated in job interviews to stay up-to-date on industry requirements, find a new long-term stable company job opportunity, and understand the impacts of the economic crisis, inflation, and AI on the decreasing demand for human resources in the technology industry.</li>
-                                        <li>Improved my English skills with my teacher and explored tools like ChatGPT and Google Gemini for work, to meet increasingly demanding recruitment needs.</li>
-                                        <li>Used my free time to occasionally build a <a href="https://github.com/nguyentruonglong/user-service" target="_blank">User Service</a> using Golang to enhance technical expertise.</li>
-                                    </ul>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        // Scroll to top activation
+        var scrollToTopLink = '.scroll-to-top-link';
+        $(document).on('click', scrollToTopLink, function (e) {
+            e.preventDefault();
+            $("html, body").animate({
+                scrollTop: 0
+            }, 1000);
+        });
 
-                <div class="work-item">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-4 col-xs-10 col-xs-push-1">
-                            <div class="left-content">
-                                <p class="date">12/2022<br><span>04/2021</span></p>
-                                <div class="company-info">
-                                    <h4>Tiki Global Pte. Ltd (Headquarters: 10 Anson Road #21-07 International Plaza, Singapore)</h4>
-                                    <h6>Fullstack Software Engineer - Level 3 (Python/Django Framework, Python Celery Task, Kafka, RabbitMQ, Redis, Kibana, Elasticsearch, AWS3, Python Image Processing, PostgreSQL and React.JS)</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-8 col-sm-7 col-xs-10 col-xs-push-1">
-                            <div class="right-content">
-                                <h4>MY CONTRIBUTIONS</h4>
-                                <p>
-                                    <ul>
-                                        <li>Used Scrum/Agile for software development and managed tasks with JIRA.</li>
-                                        <li>Developed and maintained the backend After-Sales Management System (AMS) using Python/Django, Kafka, RabbitMQ, Redis, Kibana, Elasticsearch, and PostgreSQL for Tiki's e-commerce.</li>
-                                        <li>Developed v2 APIs for the "Customer Return" service and enhanced it for a better customer experience.</li>
-                                        <li>Assisted in developing a system to manage returned products, optimizing handling for liquidation or disposal.</li>
-                                        <li>Implemented features requested by Tiki Care and other teams in collaboration with backend engineers.</li>
-                                        <li>Resolved bugs in the backend AMS system with QCs from various teams on production and UAT servers, following the Git Flow process.</li>
-                                        <li>Contributed to the frontend project using React.js, Redux-Saga, and Ant Design, creating features and interfaces.</li>
-                                        <li>Collaborated with team members to resolve bugs in the frontend AMS system on the UAT server, following the Git Flow process.</li>
-                                    </ul>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        // Progress bars activation
+        // activateProgressBar('#dsa');
+        // activateProgressBar('#system-design');
+        // activateProgressBar('.programming-language');
+        // activateProgressBar('#database');
+        // activateProgressBar('#ai');
+        // activateProgressBar('#analytical-skills');
+        // activateProgressBar('#problem-solving-skills');
+        // activateProgressBar('#strong-collaboration-skills');
+        // activateProgressBar('#agile-skills');
 
-                <div class="work-item">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-4 col-xs-10 col-xs-push-1">
-                            <div class="left-content">
-                                <p class="date">01/2021<br><span>10/2018</span></p>
-                                <div class="company-info">
-                                    <h4></h4>
-                                    <h6>Freelance Remote Developer</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-8 col-sm-7 col-xs-10 col-xs-push-1">
-                            <div class="right-content">
-                                <h4>MY CONTRIBUTIONS</h4>
-                                <p>
-                                    <ul>
-                                        <li>Built my freelance projects from scratch during the first 2 years of my career to deepen my knowledge about the processing performance of programming languages and system design for future career orientation before officially working for companies.</li>
-                                        <li>Collaborated with a small team of four members to develop various products (such as desktop applications, chrome extensions, web apps, etc.) as per the employer's requirements.</li>
-                                        <li>Created automated web testing tools as per the specific needs of the employers.</li>
-                                        <li>Designed and developed automated data scraping tools based on the requirements provided by the employers.</li>
-                                        <li>Addressed and resolved code-related issues and performed bug fixes for codes provided by the employers.</li>
-                                    </ul>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        // Function to activate progress bars
+        function activateProgressBar(selector) {
+            $(selector).LineProgressbar({
+                ShowProgressCount: false,
+                percentage: 100,
+                fillBackgroundColor: '#1abc9c',
+                height: '5px',
+                radius: '15px'
+            });
+        }
 
-                <div class="work-item">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-4 col-xs-10 col-xs-push-1">
-                            <div class="left-content">
-                                <p class="date">08/2017<br><span>05/2017</span></p>
-                                <div class="company-info">
-                                    <h4>Transcosmos Technologic Arts Co., Ltd (Headquarters: Tokyo, Japan)</h4>
-                                    <h6>Software Engineering Intern (Cucumber, Selenium, Express.js, MongoDB)</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-8 col-sm-7 col-xs-10 col-xs-push-1">
-                            <div class="right-content">
-                                <h4>MY CONTRIBUTIONS</h4>
-                                <p>
-                                    <ul>
-                                        <li>Left a part-time job to join a new company affiliated with my school's computer science and engineering department for a summer internship program.</li>
-                                        <li>Employed the Agile process framework for the chatbot development project.</li>
-                                        <li>Engaged in automation testing using behaviour-driven development (BDD) within Agile teams.</li>
-                                        <li>Created test scripts using the Gherkin language and implemented the testing process in Java with Cucumber.</li>
-                                        <li>Acquired knowledge about API.AI, Messenger Platform API, and MongoDB to develop a ChatFlow for the Chatbot.</li>
-                                        <li>Formulated a comprehensive list of questions and answers for the student survey.</li>
-                                        <li>Developed a chatbot using Node.js, integrated API.AI, Messenger Platform API, and MongoDB hosted on mLab.</li>
-                                    </ul>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-4 col-xs-10 col-xs-push-1">
-                            <div class="left-content">
-                                <p class="date">05/2017<br><span>12/2016</span></p>
-                                <div class="company-info">
-                                    <h4>Wacontre Co., Ltd (Headquarters: Ho Chi Minh City, Vietnam)</h4>
-                                    <h6>Part-time Web Developer</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-8 col-sm-7 col-xs-10 col-xs-push-1">
-                            <div class="right-content">
-                                <h4>MY CONTRIBUTIONS</h4>
-                                <p>
-                                    <ul>
-                                        <li>Worked part-time at the company's office to fit my study schedule and learn about the company's working environment.</li>
-                                        <li>Incorporated a sitemap generator into the company websites and company client websites.</li>
-                                        <li>Enhanced and customized homepage templates, ensuring integration with content management systems and multilingual support.</li>
-                                        <li>Improved websites based on customer needs and integrated PayPal checkout functionality for seamless transactions.</li>
-                                        <li>Designed comprehensive article templates, implemented HTML-formatted email functions, and added sitemap generators to improve user experience and website navigation.</li>
-                                    </ul>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-            </div>
-        </section>
-       
-       <!--Projects Section start-->
-       <section class="section-padding blog-section" id="project">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
-                       <div class="section-title text-center">
-                           <h2 class="fade-scroll">My Projects</h2>
-                           <p class=""></p>
-                       </div>
-                   </div>
-                </div>
-                <div class="row">
-                        <div class="col-sm-6">
-                            <div class="resume-project">
-                                <!--<div class="resume-title">
-                                    <h3> <i class="fa fa-desktop" aria-hidden="true"></i> Programming projects</h3>
-                                </div>-->
-                                <div class="list-projects">
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>User Service (ChatGPT, Golang, Gin framework)</h4> </div> 
-                                          <div class="year pull-right"><h4>2021-2023</h4></div>                            
-                                        </div>
-   
-                                        <div class="content-project">
-                                            <h5><a href="https://github.com/nguyentruonglong/user-service" target="_blank">Project with Source Code</a></h5>
-                                            <p>Built a simple user management service using Gin framework to prepare and learn new technologies for the team's plans to build new services at Tiki:</p>
-                                            <ul>
-                                                <li>Created User Registration: Effortlessly created accounts with essential information, including email and a secure password.</li>
-                                                <li>Implemented Verification Mechanisms: Ensured security with email and phone number verification, using verification codes sent via email and SMS.</li>
-                                                <li>Developed Login, Logout, and Password Reset: Securely accessed accounts through user-friendly login, logout for data privacy, and password reset via email.</li>
-                                                <li>Managed Profile and Search: Personalized profiles with details like email and phone number, etc., and implemented search and listing of users based on various criteria.</li>
-                                                <li>Integrated Bearer Token Authentication: Secured API access with Bearer tokens.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+        // Image load with Masonry layout
+        var container = $('.container');
+        container.imagesLoaded(function () {
+            var portfolio = $('.portfolio-masonry').isotope({
+                itemSelector: '.portfolio-item',
+                percentPosition: true,
+                masonry: {
+                    columnWidth: '.psize'
+                },
+            });
 
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>Tiki's Backend After-Sales Management System (Python/Django Framework, Kafka, RabbitMQ, Redis, Kibana, Elasticsearch, and PostgreSQL)</h4> </div> 
-                                          <div class="year pull-right"><h4>2021-2022</h4></div>                            
-                                        </div>
-   
-                                        <div class="content-project">
-                                            <p>Contributed to improving Tiki's Backend After-Sales System, creating features, resolving bugs, optimizing product handling, and reviewing team code:</p>
-                                            <ul>
-                                                <li>Contributed to the backend After-Sales Management System project using Python/Django Framework, Kafka, RabbitMQ, Redis, Kibana, Elasticsearch, and PostgreSQL.</li>
-                                                <li>Worked with business analysts, QCs, and other frontend software engineers in the AMS team to create v2 APIs for the "Customer Return" service using Python/Django framework.</li>
-                                                <li>Shared ideas with the AMS team to enhance the "Customer Return" service for a better experience for Tiki's customers.</li>
-                                                <li>Assisted Tiki's warehouse staff in developing a system to manage returned products, including optimizing the handling of returned products for liquidation or disposal.</li>
-                                                <li>Collaborated with other backend software engineers in the AMS team to implement small features requested by Tiki Care and other teams.</li>
-                                                <li>Worked with QCs in the AMS team, as well as those in OMS, TMS, Seller Center, etc., to resolve bugs in the AMS system on production and UAT servers in the backend, as assigned by the project manager.</li>
-                                                <li>Reviewed code for fellow team members following the Git Flow process.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+            $(document).on('click', '.portfolio-menu-item', function () {
+                var filterValue = $(this).attr('data-filter');
+                portfolio.isotope({ filter: filterValue });
+            });
+        });
 
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>Tiki's Frontend After-Sales Management System (React.js, Redux-Saga, and Ant Design)</h4> </div> 
-                                          <div class="year pull-right"><h4>2021-2022</h4></div>                            
-                                        </div>
-   
-                                        <div class="content-project">
-                                            <p>Contributed to Tiki's Frontend After-Sales System project, creating features, resolving bugs, and reviewing team code:</p>
-                                            <ul>
-                                                <li>Contributed to the After-Sales Management System frontend project using React.js, Redux-Saga, and Ant Design.</li>
-                                                <li>Worked with business analysts, QCs, and other frontend software engineers in the AMS team to create straightforward features and interfaces for the AMS system.</li>
-                                                <li>Collaborated with business analysts, QCs, and other frontend software engineers in the AMS team to resolve bugs in the AMS system on the UAT server in the frontend, as assigned by the project manager.</li>
-                                                <li>Reviewed code for fellow team members following the Git Flow process.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+        // Portfolio filter menu active selector
+        var portfolioMenuItems = '.portfolio-menu-item';
+        $(document).on('click', portfolioMenuItems, function () {
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+        });
 
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>Facebook Pages Scraping Tool (Python, Multi-threading and Multi-processing, Selenium, MongoDB)</h4> </div> 
-                                          <div class="year pull-right"><h4>2020</h4></div>                            
-                                        </div>
-   
-                                        <div class="content-project">
-                                            <h5><a href="https://www.youtube.com/watch?v=0dFgvRPxTUU" target="_blank">Project Demo 1</a></h5>
-                                            <h5><a href="https://www.youtube.com/watch?v=E5OUGJgZ2O8" target="_blank">Project Demo 2</a></h5>
-                                            <h5><a href="https://gitlab.com/nguyentruonglong/facebook-pages-scraping-tool" target="_blank">Project with Source Code and Documentation</a></h5>
-                                            <p>This project focused on developing a parallel scraping tool to extract data from around three hundred million Facebook Pages, supporting my employer's marketing campaigns. Key contributions included:</p>
-                                            <ul>
-                                                <li>Used numerous Proxies and Cookies generated through an automatic Facebook account registration tool to effectively bypass the Facebook system.</li>
-                                                <li>Implemented Python's multi-threading and multi-processing programming capabilities to optimize resource utilization and maximize the speed of data scraping operations.</li>
-                                                <li>Employed MongoDB and CSV as storage mechanisms to efficiently manage and store the substantial amount of scraped data.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+        // Testimonial carousel slider activation
+        var testimonialCarousel = $('.carousel-testimonial');
+        testimonialCarousel.owlCarousel({
+            center: true,
+            loop: true,
+            dots: true,
+            nav: false,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: { items: 1 },
+                768: { items: 1 },
+                960: { items: 1 },
+                1200: { items: 3 },
+                1920: { items: 3 }
+            }
+        });
 
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>Airline Reservation System Development (Node.js, Express.js, jQuery, Bootstrap)</h4> </div> 
-                                          <div class="year pull-right"><h4>2020</h4></div>                            
-                                        </div>
-   
-                                        <div class="content-project">
-                                            <h5><a href="https://www.youtube.com/watch?v=vzDffquI5Lg" target="_blank">Project Demo</a></h5>
-                                            <p>This project focused on creating a comprehensive airline reservation system, allowing customers to effortlessly book flights with VietJet Air, Bamboo Airways, Vietnam Airlines, and Pacific Airlines. Key contributions included:</p>
-                                            <ul>
-                                                <li>Created a visually appealing Frontend design inspired by the Bamboo Airways homepage, adhering to the specific requirements of the employer.</li>
-                                                <li>Enabled customers to select their preferred ticket class and choose between one-way or two-way ticket options.</li>
-                                                <li>Seamlessly integrated the system with an online payment platform, ensuring smooth and secure transaction processing.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+        // Magnific popup image activation
+        var imagePopup = $('.image-popup');
+        imagePopup.magnificPopup({ type: 'image' });
 
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>Total Video Downloader (Node.js, Express.js, Jquery, Bootstrap)</h4> </div> 
-                                          <div class="year pull-right"><h4>2018-2020</h4></div>                            
-                                        </div>
-    
-                                        <div class="content-project">
-                                            <!-- <h5><a href="https://drive.google.com/file/d/1pOGwCdhQ5gSle3eb7xj67FKqFa4g6sf4/view" target="_blank">Project Demo</a></h5> -->
-                                            <h5><a href="https://drive.google.com/file/d/1jN6UgyBRD3SZGp32LJkbNEfhrqcO-biU/view" target="_blank">Website Traffic Statistics</a></h5>
-                                            <p>This project involves the development of a web application that provides a comprehensive video downloading solution, referred to as "Total Video Downloader". The application leverages technologies such as Node.js, Express.js, jQuery, and Bootstrap. This downloader facilitates the seamless downloading of videos from various online video sharing platforms such as YouTube, Facebook, Vimeo, and more. The following key aspects are involved:</p>
-                                            <ul>
-                                                <li>Create an SEO-friendly Frontend interface using HTML, CSS, Bootstrap 3, JavaScript, and jQuery. This ensures improved visibility and higher ranking positions in search engine results.</li>
-                                                <li>Construct parsers and extractors capable of retrieving hidden video URLs from the page source of video-sharing websites.</li>
-                                                <li>It is noteworthy that the website, with nearly 140,000-170,000 monthly global requests, can be accessed at <a href="https://totalvideodownloader.com" target="_blank">https://totalvideodownloader.com</a>.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>E-commerce Sales and Advertisement Monitoring System (Python, Django REST framework, MySQL)</h4></div> 
-                                          <div class="year pull-right"><h4>2020</h4></div>
-                                        </div>
-    
-                                        <div class="content-project">
-                                            <h5><a href="https://www.youtube.com/watch?v=4uUw6vX-6JE" target="_blank">Project Demo</a></h5>
-                                            <h5><a href="https://gitlab.com/nguyentruonglong/e-commerce-sales-and-advertisement-monitoring-system" target="_blank">Project with Source Code and Documentation</a></h5>
-                                            <p>This project involves the implementation of a robust system that enables employers to monitor sales and advertising information from their business rivals on Shopify and Facebook platforms. The following tasks are carried out:</p>
-                                            <ul>
-                                                <li>Create a scalable system architecture that allows the deployment of multiple modules on various Virtual Private Servers (VPS) to work collaboratively.</li>
-                                                <li>Create a database by designing an Entity-Relationship Diagram (ERD) based on the customer's requirements and transforming it into a functional physical database.</li>
-                                                <li>Develop the server-side logic as an API Gateway and deploy it on an Ubuntu VPS.</li>
-                                                <li>Design REST APIs using the Django REST framework to facilitate communication between the Frontend and the server-side components.</li>
-                                                <li>Design REST APIs using the Django REST framework for the modules responsible for scraping data, which are deployed on separate VPS, to interact with the server-side.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>Shopify Product Scraping Tool (Python, Selenium Framework, Multi-threading and Multi-processing)</h4></div> 
-                                          <div class="year pull-right"><h4>2020</h4></div>
-                                        </div>
-    
-                                        <div class="content-project">
-                                            <h5><a href="https://www.youtube.com/watch?v=4uUw6vX-6JE" target="_blank">Project Demo 1</a></h5>
-                                            <h5><a href="https://www.youtube.com/watch?v=Px7vATssH4M" target="_blank">Project Demo 2</a></h5>
-                                            <p>This project entails the development of a data scraping tool that extracts information from Shopify Stores. The tool is built using the Python programming language and the Selenium framework. The key aspects of the project include:</p>
-                                            <ul>
-                                                <li>Retrieve a list of objects requiring data scraping from the API Gateway server-side through a REST API.</li>
-                                                <li>Extract both basic information from Shopify Stores and detailed information about products from these stores, with a scraping frequency of every 15 minutes.</li>
-                                                <li>Send the extracted information back to the API Gateway server-side through a REST API.</li>
-                                                <li>Enhance the tool by removing Selenium and implement a new version with multi-threading and multi-processing capabilities to optimize the speed and resource utilization of the scraping process.</li>
-                                                <li>Implement mechanisms to bypass Cloudflare protection and successfully scrape data from Shopify Stores.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                      
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>Facebook Ad Library Scraping Tool (Python, Selenium Framework)</h4></div> 
-                                          <div class="year pull-right"><h4>2020</h4></div>
-                                        </div>
-    
-                                        <div class="content-project">
-                                            <h5><a href="https://www.youtube.com/watch?v=foOxr-r3kFo" target="_blank">Project Demo 1</a></h5>
-                                            <h5><a href="https://www.youtube.com/watch?v=L_HZjvFsKno" target="_blank">Project Demo 2</a></h5>
-                                            <h5><a href="https://gitlab.com/nguyentruonglong/facebook-ad-library-scraping-tool" target="_blank">Project with Source Code</a></h5>
-                                            <p>This project focuses on the development of a data scraping tool specifically designed for extracting data from the Facebook Ad Library. The tool is built using the Python programming language and the Selenium framework. The following key aspects are involved in the project:</p>
-                                            <ul>
-                                                <li>Use Cookies generated from an automated Facebook account registration tool to ensure uninterrupted scraping and avoid being blocked by Facebook.</li>
-                                                <li>Retrieve a list of objects requiring data scraping from the API Gateway server-side through a REST API.</li>
-                                                <li>Extract both basic information about Facebook Pages and detailed information about the running ads on these pages. The scraping process is scheduled to occur every 24 hours.</li>
-                                                <li>Send the extracted information back to the API Gateway server-side through a REST API.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+        // Header typing effect activation
+        var typed = new Typed('.title-header', {
+            strings: ['TRUONG <span>LONG</span>', 'WEB <span>BACKEND</span>', 'SOFTWARE <span>ENGINEER</span>'],
+            typeSpeed: 50,
+            backSpeed: 60,
+            smartBackspace: false,
+            loop: true,
+            showCursor: false,
+            autoInsertCss: true
+        });
 
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>Facebook Video Post Scraping Tool (Python, Selenium Framework)</h4></div> 
-                                          <div class="year pull-right"><h4>2020</h4></div>
-                                        </div>
-    
-                                        <div class="content-project">
-                                            <h5><a href="https://www.youtube.com/watch?v=ALLydQ69qMQ" target="_blank">Project Demo</a></h5>
-                                            <h5><a href="https://gitlab.com/nguyentruonglong/facebook-video-post-scraping-tool" target="_blank">Project with Source Code</a></h5>
-                                            <p>This project aims to develop a data scraping tool specifically designed for extracting data from Facebook Video Posts. The tool is built using the Python programming language and the Selenium framework. The project includes the following key aspects:</p>
-                                            <ul>
-                                                <li>Use Cookies generated from an automated Facebook account registration tool to ensure uninterrupted scraping and prevent being blocked by Facebook.</li>
-                                                <li>Retrieve a list of objects requiring data scraping from the API Gateway server-side through a REST API.</li>
-                                                <li>Extract detailed information from Facebook Video Posts. The scraping process is scheduled to occur every 24 hours.</li>
-                                                <li>Send the extracted information back to the API Gateway server-side through a REST API.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+        // Equalize heights of list-projects columns
+        function equalizeHeights() {
+            var maxHeight = 0;
+            $('.list-projects').each(function () {
+                var height = $(this).height();
+                if (height > maxHeight) {
+                    maxHeight = height;
+                }
+            });
+            $('.list-projects').height(maxHeight);
+        }
 
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>Facebook Sponsored Posts Filtering Chrome Extension (HTML, CSS, JavaScript)</h4> </div> 
-                                          <div class="year pull-right"><h4>2020</h4></div>                            
-                                        </div>
-    
-                                        <div class="content-project">
-                                            <h5><a href="https://www.youtube.com/watch?v=VEbX4Er3iSA" target="_blank">Project Demo</a></h5>
-                                            <p>The project entails developing a Chrome extension that filters and displays only sponsored posts on the Facebook News Feed. The employer specifically requires the extension to function on the version of Facebook accessed via <a href="https://www.facebook.com" target="_blank">https://www.facebook.com</a>. However, the implementation will be limited to the version accessed through <a href="hhttps://mobile.facebook.com" target="_blank">https://mobile.facebook.com</a>. It is important to note that the employer does not permit the public sharing of the source code for this project.</p>
-                                        </div>
-                                    </div>
+        equalizeHeights();
 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="resume-project">
-                                <div class="list-projects">
+        // Equalize heights on window resize
+        $(window).resize(function () {
+            $('.list-projects').css('height', 'auto');
+            equalizeHeights();
+        });
 
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>Shopify Stores Data Scraping with Google Chrome Extension (Java, Selenium framework)</h4> </div> 
-                                          <div class="year pull-right"><h4>2020</h4></div>                            
-                                        </div>
-    
-                                        <div class="content-project">
-                                            <h5><a href="https://www.youtube.com/watch?v=X3WKAghsbyo" target="_blank">Project Demo</a></h5>
-                                            <p>The objective of this project is to develop a tool using Java programming language and the Selenium framework. The tool will simulate the behavior of the Ali Hunter Chrome Extension and extract valuable information about analyzed products on Shopify Stores. This extraction will be performed directly from the Chrome Extension, enabling efficient data scraping.</p>
-                                            <ul>
-                                        </div>
-                                    </div>
-                                      
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>Automated Web Testing Tool (Java, Selenium framework)</h4></div> 
-                                          <div class="year pull-right"><h4>2019</h4></div>                            
-                                        </div>
-    
-                                        <div class="content-project">
-                                            <h5><a href="https://www.youtube.com/watch?v=OkguBuJqYIk" target="_blank">Project Demo</a></h5>
-                                            <p>The aim of this project is to develop a comprehensive tool that simulates user behavior for testing complex functions within a web application system. The tool will be built using the Java programming language and the Selenium framework, providing an efficient and reliable solution for automated web testing. Key features of the tool include:</p>
-                                            <ul>
-                                                <li>Simulate user behavior to log into the employer's web application system by emulating interactions with the login popup.</li>
-                                                <li>Extract a list of available URLs from the left sidebar menu on the dashboard page.</li>
-                                                <li>Create test cases and automatically emulate user behavior to perform tests on individual pages from the extracted URL list.</li>
-                                                <li>Capture screenshots and record test results in a CSV file after executing each test case.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                      
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>Confidential Chat Web Application (Node.js, Express.js, Socket.IO, Jquery)</h4></div> 
-                                          <div class="year pull-right"><h4>2018</h4></div>                            
-                                        </div>
-    
-                                        <div class="content-project">
-                                            <h5><a href="" target="_blank">Project with Source Code</a></h5>
-                                            <p>The objective of this project is to develop a secure and confidential chat web application using Node.js, Socket.IO, and free Frontend templates. The application aims to provide users with a platform for random matching and initiating conversations while ensuring the confidentiality of their messages through encryption. Key features of the web application include:</p>
-                                            <ul>
-                                                <li>Enable users to engage in random matches with other individuals and initiate chat conversations.</li>
-                                                <li>Implement a combination of the RSA and DES encryption algorithms to encrypt the text messages exchanged between users, enhancing the security and confidentiality of their communication.</li>
-                                                <li>Please note that this project is currently on hold.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>English-to-Vietnamese Neural Machine Translation System (Deep learning, Python, TensorFlow)</h4></div> 
-                                          <div class="year pull-right"><h4>2018-2019</h4></div>
-                                        </div>
-    
-                                        <div class="content-project">
-                                            <h5><a href="https://www.youtube.com/watch?v=NvCUxmtnw7w" target="_blank">Project Demo</a></h5>
-                                            <h5><a href="https://gitlab.com/nguyentruonglong/thesis-project" target="_blank">Project with Source Code</a></h5>
-                                            <p>This project focuses on implementing a neural machine translation system that effectively translates text from English to Vietnamese. The primary objective is to achieve accurate translation performance, and it serves as the topic for my graduation thesis. The project involves the following steps:</p>
-                                            <ul>
-                                                <li>Study classical machine translation methods and explore machine translation techniques based on neural networks.</li>
-                                                <li>Gain knowledge of essential concepts in deep learning and understand various word embedding methods.</li>
-                                                <li>Scrape monolingual and bilingual corpora from reputable sources, including monolingual news websites and English-Vietnamese bilingual news websites. Perform preprocessing of the collected data.</li>
-                                                <li>Construct machine translation models and train them using the preprocessed data. Evaluate the models to assess their performance.</li>
-                                                <li>Compare the effectiveness of different components and hyperparameter combinations within the machine translation models by utilizing the BLEU score as a metric.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>Facebook Messenger Chatbot (Node.js, MongoDB, Facebook API, Facebook webhook)</h4> </div>
-                                          <div class="year pull-right"><h4>2017</h4></div>                            
-                                        </div>
-    
-                                        <div class="content-project">
-                                            <h5><a href="https://drive.google.com/file/d/1IcLEz3QXMls9Qefzeq04lj95DJuIEkvo/view" target="_blank">Project Report</a></h5>
-                                            <h5><a href="https://github.com/nguyentruonglong/kaito-chatbot" target="_blank">Project with Source Code</a></h5>
-                                            <p>This project focuses on implementing a chatbot on the Facebook platform using Node.js and Dialogflow (formerly known as Api.ai). The goal of this project is to leverage the capabilities of chatbot technology to facilitate efficient communication with students, conduct surveys seamlessly, and store the collected data in a structured manner for further analysis. It is being developed as part of my graduate internship and includes the following features:</p>
-                                            <ul>
-                                                <li>Engage in conversations with students and conduct surveys based on a predefined set of questions through Facebook Messenger.</li>
-                                                <li>Extract survey data from student responses and store it in a MongoDB database hosted on the mLab service.</li>
-                                                <li>Implement authentication mechanisms and allow administrators to manage question lists and corresponding answers via Facebook Messenger.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>Secure File Sharing Application (C# Windows Forms, Cryptography)</h4> </div> 
-                                          <div class="year pull-right"><h4>2017</h4></div>                            
-                                        </div>
-    
-                                        <div class="content-project">
-                                            <h5><a href="https://drive.google.com/file/d/1NdJpPKpvtVLqwSdC5GpfrvTucoHFCfI8/view" target="_blank">Project Report</a></h5>
-                                            <h5><a href="https://gitlab.com/nguyentruonglong/secure-file-sharing" target="_blank">Project with Source Code</a></h5>
-                                            <p>As part of my Cryptography and Network Security course, I and my team have undertaken the task of developing a robust file sharing application using C# Windows Forms. The application focuses on ensuring the security and privacy of shared files through the use of encryption algorithms. The following tasks are included:</p>
-                                            <ul>
-                                                <li>Develop a user-friendly interface using C# Windows Forms to facilitate file sharing operations.</li>
-                                                <li>Implement a combination of DES, Twofish, and RSA encryption algorithms to encrypt and decrypt shared files.</li>
-                                                <li>Ensure the confidentiality and integrity of shared files by applying robust encryption techniques.</li>
-                                            </ul>
-                                        </div>
-                                    </div>                                  
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>E-commerce Website Development (Bootstrap, JavaScript, PHP, MySQL)</h4> </div> 
-                                          <div class="year pull-right"><h4>2017</h4></div>                            
-                                        </div>
-    
-                                        <div class="content-project">
-                                            <h5><a href="https://drive.google.com/file/d/1J_7BaXqwY4yckPYIP9h3Y6hjwH6keHw5/view" target="_blank">Project Report</a></h5>
-                                            <p>As part of my E-Commerce course, I have embarked on the task of building a dynamic online store website. This project utilizes a combination of HTML, CSS, Javascript, and PHP programming languages to create an engaging and user-friendly platform. The website is designed to cater to both customers and administrators, providing essential features for seamless online shopping and efficient store management.</p>
-                                        </div>
-                                    </div>
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>Café Management System (Software Engineering course)</h4> </div>
-                                          <div class="year pull-right"><h4>2017</h4></div>                            
-                                        </div>
-    
-                                        <div class="content-project">
-                                            <h5><a href="https://drive.google.com/drive/folders/1KD5Yi7kYJh7Ui7TkqtQPbjg7mD4b8nIy" target="_blank">Project Report</a></h5>
-                                            <p>In the Software Engineering course, I was working on designing a Café Management System. The project involves designing a simple API and a database using PHP and MySQL. My team follow standard software engineering processes to ensure the project's success. The following tasks are part of the project:</p>
-                                            <ul>
-                                                <li>Generate design ideas and collaborate with the team to transform them into use cases through discussions.</li>
-                                                <li>Design sequence diagrams and activity diagrams based on the assigned use cases, which are discussed and agreed upon with the team.</li>
-                                                <li>Contribute ideas for the application's user interface (UI) and design the Entity-Relationship Diagram (ERD) for the database.</li>
-                                                <li>Design the class diagram based on the assigned tasks discussed with the team.</li>
-                                                <li>Build the database and the API, and then integrate them into the Café Management System in collaboration with the team.</li>
-                                                <li>Acquire knowledge about using Git for version control and its importance in team collaboration during software development projects.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>Wacontre Projects</h4> </div>
-                                          <div class="year pull-right"><h4>2017</h4></div>                            
-                                        </div>
-    
-                                        <div class="content-project">
-                                            <p>
-                                                <ul>
-                                                <li>Develop the website <a href="https://clip.wacontre.com" target="_blank">https://clip.wacontre.com</a>:
-                                                    <ul>
-                                                        <li>Edit the static homepage template based on the provided PSD file's new design.</li>
-                                                        <li>Merge the static template into the CMS WordPress and incorporate the latest articles onto the homepage.</li>
-                                                        <li>Design and construct an article template for the website, including tags, breadcrumb navigation, categories, related articles, and layout and style for article content.</li>
-                                                        <li>Integrate multiple languages (English, Japanese, and Vietnamese) into the website.</li>
-                                                        <li>Incorporate a sitemap generator into the website.</li>
-                                                    </ul>
-                                                </li>
-                                                <li>Develop the website <a href="https://samuraiwifi.vn" target="_blank">https://samuraiwifi.vn</a>:
-                                                    <ul>
-                                                        <li>Edit the homepage template and enhance the website in accordance with customer requirements.</li>
-                                                        <li>Integrate PayPal checkout functionality into the website.</li>
-                                                    </ul>
-                                                </li>
-                                                <li>Develop the website <a href="https://ts-kenchiku.com" target="_blank">https://ts-kenchiku.com</a>:
-                                                    <ul>
-                                                        <li>Edit the homepage template and upgrade the website based on customer requirements.</li>
-                                                        <li>Implement functions to send HTML-formatted emails to the owner of the website when customers submit inquiries through the contact form on the homepage.</li>
-                                                    </ul>
-                                                </li>
-                                                <li>Develop the website <a href="http://ja.viecoi.vn" target="_blank">http://ja.viecoi.vn</a>:
-                                                    <ul>
-                                                        <li>Integrate multiple languages (English, Japanese, and Vietnamese) into the website.</li>
-                                                        <li>Incorporate a sitemap generator into the website.</li>
-                                                    </ul>
-                                                </li>
-                                                </ul>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>BKOOL Programming Language Development (Scala, ANTLR 4, Jasmin Assembly Language)</h4> </div> 
-                                          <div class="year pull-right"><h4>2016</h4></div>                            
-                                        </div>
-    
-                                        <div class="content-project">
-                                            <h5><a href="https://drive.google.com/file/d/1kjpjZXwerDhkHgkRDkJTjpC8L82dYa3u/view" target="_blank">BKOOL Summary</a></h5>
-                                            <h5><a href="https://gitlab.com/nguyentruonglong/bkool-programming-language" target="_blank">Project with Source Code</a></h5>
-                                            <p>In the Principles of Programming Languages course, I was undertaking the development of a simple programming language called BKOOL. This language will have its own lexical and syntax rules, and will be validated using ANTLR 4, Java, and Scala. Furthermore, a compiler will be developed to translate BKOOL programs into Jasmin assembly language code. The project involves the following tasks:</p>
-                                            <ul>
-                                                <li>Compose the lexical specification of the BKOOL programming language using regular expressions.</li>
-                                                <li>Compose the syntax specification of the BKOOL programming language using Backus-Naur Form (BNF).</li>
-                                                <li>Use ANTLR 4, in conjunction with the Java language, to define lexer and parser rules for the BKOOL language.</li>
-                                                <li>Employ the Scala language to create a program for checking the Abstract Syntax Tree (AST) of BKOOL programs.</li>
-                                                <li>Implement a simple compiler that generates Jasmin code using a functional programming language, specifically Scala.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>Chat Application Development (Java, Network Programming)</h4></div> 
-                                          <div class="year pull-right"><h4>2016</h4></div>                            
-                                        </div>
+    });
 
-                                        <div class="content-project">
-                                            <h5><a href="https://drive.google.com/file/d/1T8EIzHdpte4zVeUhP7kqeUfgFlIjbOX4/view" target="_blank">Project Demo</a></h5>
-                                            <p>As part of my Computer Networks course, I was undertaking the implementation of a robust chat application utilizing the TCP and UDP protocols. This application, built using Java Swing, boasts a range of features including individual and group chat functionalities.</p>
-                                        </div>
-                                    </div>
-                                    <div class="project-item">
-                                        <div class="title-project">
-                                          <div class="name-project pull-left"><h4>Design and Implementation of a Relational Database System (Database Design, Oracle SQL, PHP)</h4></div>
-                                          <div class="year pull-right"><h4>2015</h4></div>                            
-                                        </div>
-    
-                                        <div class="content-project">
-                                            <h5><a href="https://drive.google.com/file/d/1OCnO-b3De2-72LpThqL8TDdlZ2pBVQMQ/view" target="_blank">Project Report</a></h5>
-                                            <p>As part of my Database Management System course, I have undertaken the task of designing and building a robust database system for a product management application. This project involves utilizing my knowledge of database design principles and leveraging tools such as Oracle SQL and PHP to create a highly efficient and functional system. Key aspects of the project include:</p>
-                                            <ul>
-                                                <li>Design an Entity Relationship Diagram (ERD) that accurately represents the relationships and attributes of the entities involved in the product management application.</li>
-                                                <li>Construct the logical model of the database by translating the ERD into a well-structured and organized database schema.</li>
-                                                <li>Translate the logical model into an actual physical database by defining tables, establishing relationships, and optimizing the database for efficient data retrieval and storage.</li>
-                                                <li>Create a web application using PHP to provide a user-friendly interface for interacting with the database system.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+    // Window onload function
+    window.onload = function () {
+        function getMaxHeight(elements) {
+            return Math.max.apply(null, elements.map(function () {
+                return $(this).outerHeight();
+            }).get());
+        }
 
-                                </div>
-                            </div>
-                        </div>
+        $(".work-item > div.row").each(function () {
+            let elementHeight = $(this).outerHeight() - 15;
+            if ($(document).width() > 767) {
+                $(this).children("div.row > div:first").css("cssText", "height: " + elementHeight + "px !important;");
+            }
+        });
 
-                </div>
-           </div>
-        </section>
-       <!--Projects Section end-->
-       <!--interest Section start-->
-        <section class="section-padding testimonial-section" id="interest">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <div class="section-title text-center">
-                               <h2 class="fade-scroll">My Interests</h2>
-                               <p class=""></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="carousel-testimonial">
-                            <div class="testimonial-item">
-                                    <div class="testimonial-content">
-                                        <i class="fa fa-quote-left quote-icon"></i>
-                                        <p>History is the version of past events that people have decided to agree upon.</p>
-                                    </div>
-                                    <div class="testimonial-footer">
-                                         <img class="img-circle" src="assets/img/author-img.png"  alt="Testimonial Image">
-                                       <p class="author-details">Reading History Books<span></span></p>
-                                    </div>
-                            </div>
-                            <div class="testimonial-item">
-                                    <div class="testimonial-content">
-                                        <i class="fa fa-quote-left quote-icon"></i>
-                                        <p>Microorganisms will give you anything you want if you know how to ask them.</p>
-                                    </div>
-                                    <div class="testimonial-footer">
-                                         <img class="img-circle" src="assets/img/microorganism.jpg"  alt="Testimonial Image">
-                                       <p class="author-details">Observe Microorganisms</br>(<a href="https://photos.app.goo.gl/girdwq5kzpQ3V9MG7" target="_blank">view my album</a>)<span></span></p>
-                                    </div>
-                            </div>
-                            <div class="testimonial-item">
-                                    <div class="testimonial-content">
-                                        <i class="fa fa-quote-left quote-icon"></i>
-                                        <p>The science of today is the technology of tomorrow.</p>
-                                    </div>
-                                    <div class="testimonial-footer">
-                                         <img class="img-circle" src="assets/img/science-news.png"  alt="Testimonial Image">
-                                       <p class="author-details">Reading Science News<span></span></p>
-                                    </div>
-                            </div>
-                            <div class="testimonial-item">
-                                    <div class="testimonial-content">
-                                        <i class="fa fa-quote-left quote-icon"></i>
-                                        <p>Instrumental music can spread the international language.</p>
-                                    </div>
-                                    <div class="testimonial-footer">
-                                         <img class="img-circle" src="assets/img/music.jpg"  alt="Testimonial Image">
-                                       <p class="author-details">Listening Instrumental Music<span></span></p>
-                                    </div>
-                            </div>
+        let allElementBlogContent = $("#blog .content-post");
+        let maxElementBlogContentHeight = getMaxHeight(allElementBlogContent);
+        $("#blog .blog-post").each(function () {
+            $(this).outerHeight(maxElementBlogContentHeight + 80);
+        });
+    };
 
-                        </div>
-                    </div>
-               
-                </div>
-            </div>
-        </section>
-       <!--interest Section end-->
-       <!--Blog Section start-->
-       <section class="section-padding blog-section" id="blog">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                       <div class="section-title text-center">
-                           <h2 class="fade-scroll">Blog Posts</h2>
-                           <!--<p class="">Read some of the best posts from my blog</p>-->
-                       </div>
-                   </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                                <div class="blog-post">
-                                    <div class="content-post">
-                                        <a href="https://nguyentruonglong.net/mo-hinh-cbow-continuous-bag-of-words.html" rel="Mô hình CBOW (Continuous Bag of Words)" title="Mô hình CBOW (Continuous Bag of Words)" target="_blank"><h3>Mô hình CBOW (Continuous Bag of Words)</h3></a>
-                                        <p>Ý tưởng chính của mô hình CBOW là dự đoán từ mục tiêu dựa vào các từ ngữ cảnh xung quanh nó trong một phạm vi nhất định.</p>
-                                    </div>
-                                    <div class="post-footer">
-                                        <!--<p class="post-date"> <i class="fa fa-calendar"></i></p>-->
-                                        <!--<p class="comment"><i class="fa fa-comment"></i></p>-->
-                                        <a class="btn-read-more" href="https://nguyentruonglong.net/mo-hinh-cbow-continuous-bag-of-words.html" rel="Mô hình CBOW (Continuous Bag of Words)" target="_blank">Read More</a>
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                                <div class="blog-post">
-                                    <div class="content-post">
-                                        <a href="https://nguyentruonglong.net/thuat-toan-gradient-descent.html" rel="Thuật toán Gradient Descent " title="Thuật toán Gradient Descent" target="_blank"><h3>Thuật toán Gradient Descent</h3></a>
-                                        <p> Ý tưởng của thuật toán gradient descent là chúng ta sẽ bắt đầu tại một điểm tùy ý, sau đó di chuyển dọc theo hướng ngược lại của gradient tại điểm đó.</p>
-                                    </div>
-                                    <div class="post-footer">
-                                        <!--<p class="post-date"> <i class="fa fa-calendar"></i></p>-->
-                                        <!--<p class="comment"><i class="fa fa-comment"></i></p>-->
-                                        <a class="btn-read-more" href="https://nguyentruonglong.net/thuat-toan-gradient-descent.html" target="_blank">Read More</a>
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                                <div class="blog-post">
-                                    <div class="content-post">
-                                        <a href="https://nguyentruonglong.net/giai-thich-chi-tiet-ve-mang-long-short-term-memory-lstm.html" rel="Giải thích chi tiết về mạng Long Short-Term Memory (LSTM) " title="Giải thích chi tiết về mạng Long Short-Term Memory (LSTM)" target="_blank"><h3>Giải thích chi tiết về mạng Long Short-Term Memory (LSTM)</h3></a>
-                                        <p>Mạng LSTM được thiết kế để giải quyết các bài toán về phụ thuộc xa (long-term dependencies) trong mạng RNN do bị ảnh hưởng bởi các vấn đề về Gradient.</p>
-                                    </div>
-                                    <div class="post-footer">
-                                        <!--<p class="post-date"> <i class="fa fa-calendar"></i></p>-->
-                                        <!--<p class="comment"><i class="fa fa-comment"></i></p>-->
-                                        <a class="btn-read-more" href="https://nguyentruonglong.net/giai-thich-chi-tiet-ve-mang-long-short-term-memory-lstm.html" target="_blank">Read More</a>
-                                    </div>
-                                </div>
-                        </div>
+    // Window resize function
+    $(window).on('resize', function () {
+        $(".work-item > div.row").each(function () {
+            $(this).children("div.row > div:first").css("cssText", "height: '' !important;");
+            let elementHeight = $(this).outerHeight() - 15;
+            if ($(document).width() > 767) {
+                $(this).children("div.row > div:first").css("cssText", "height: " + elementHeight + "px !important;");
+            }
+        });
 
-                    </div>
-                </div>
-           </div>
-        </section>
-       <!--Blog Section end-->
+        function getMaxHeight(elements) {
+            return Math.max.apply(null, elements.map(function () {
+                return $(this).outerHeight();
+            }).get());
+        }
 
-       <!--Footer area start-->
-       <footer class="footer-area" >
-           <div class="container">
-               <div class="row">
-                   <div class="col-md-6 text-center">
-                       <!--<p>© 2018 Copyright &amp;  All Rights Reserved By Nguyen Truong Long</p>-->
-                   </div>
-                   <div class="col-md-6">
-                       <div class="footer-social-icons text-center">
-                           <!--<a href="#"><i class="fa fa-facebook"></i></a>
-                           <a href="#"><i class="fa fa-twitter"></i></a>
-                           <a  href="#"><i class="fa fa-instagram"></i></a>
-                           <a  href="#"><i class="fa fa-google-plus"></i></a>
-                           <a  href="#"><i class="fa fa-github"></i></a>-->
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </footer>
-       <!--Footer area end-->
-    </div><!--for boxed Layout end-->
-        <!--jquery script load-->
-        <script src="assets/js/jquery.js"></script>
-         <!--Owl carousel script load-->
-        <script src="assets/js/owl.carousel.min.js"></script>
-        <!--Bootstrap v3 script load here-->
-        <!--<script src="assets/js/bootstrap.min.js"></script>-->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-         <!--Line Progressbar script file load-->
-        <script src="assets/js/jquery.lineProgressbar.js"></script>
-         <!--Isotope Script file load-->
-        <script src="assets/js/isotope.pkgd.min.js"></script>
-        <!--Typed js file load-->
-        <script src="assets/js/typed.js"></script>
-        <!--Magnific popup js file load-->
-        <script src="assets/js/jquery.magnific-popup.js"></script>
-        <!--Slick Nav Js File Load-->
-        <script src="assets/js/jquery.slicknav.min.js"></script>
-        <!--waypoints js file load-->
-        <script src="assets/js/waypoints.min.js"></script>
-        <!--counterup js file load-->
-        <script src="assets/js/jquery.counterup.min.js"></script>
-        <!--Wow js file load-->
-        <script src="assets/js/wow.js"></script>
-        <!--Image Loder file load-->
-        <script src="assets/js/imagesloaded.pkgd.js"></script>
-        <!--Main js file load-->
-        <script src="assets/js/main.js"></script>
+        let allElementBlogContent = $("#blog .content-post");
+        let maxElementBlogContentHeight = getMaxHeight(allElementBlogContent);
+        $("#blog .blog-post").each(function () {
+            $(this).outerHeight(maxElementBlogContentHeight + 80);
+        });
 
-    
-    </body>
-    
-</html>
+        var initialHeightTitleHeader = $(".header-section .title-header").first().outerHeight();
+        $(".header-section .title-header").css("min-height", initialHeightTitleHeader + "px");
+    });
+
+    // Window scroll function
+    $(window).on('scroll', function () {
+        // Sticky menu activation
+        var mainNavbar = $('.main-navbar');
+        var mobileLogo = $('.mobile-logo');
+        if ($(window).scrollTop() > 300) {
+            mainNavbar.addClass('nav-fixed');
+            mobileLogo.addClass('active');
+        } else {
+            mainNavbar.removeClass('nav-fixed');
+            mobileLogo.removeClass('active');
+        }
+
+        $(".mobile-logo").css("position", "fixed");
+
+        // Show and hide scroll to top button
+        var scrollToTopButton = $('.scroll-to-top-link');
+        if ($(window).scrollTop() > 500) {
+            scrollToTopButton.fadeIn(1000);
+        } else {
+            scrollToTopButton.fadeOut(1000);
+        }
+    });
+
+    // Window load function for preloader
+    $(window).on('load', function () {
+        var preLoader = $(".pre-loader");
+        preLoader.fadeOut(500);
+    });
+
+}(jQuery));
