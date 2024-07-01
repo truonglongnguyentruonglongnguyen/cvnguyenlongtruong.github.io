@@ -147,6 +147,26 @@
             autoInsertCss: true
         });
 
+        // Equalize heights of list-projects columns
+        function equalizeHeights() {
+            var maxHeight = 0;
+            $('.list-projects').each(function () {
+                var height = $(this).height();
+                if (height > maxHeight) {
+                    maxHeight = height;
+                }
+            });
+            $('.list-projects').height(maxHeight);
+        }
+
+        equalizeHeights();
+
+        // Equalize heights on window resize
+        $(window).resize(function () {
+            $('.list-projects').css('height', 'auto');
+            equalizeHeights();
+        });
+
     });
 
     // Window onload function
