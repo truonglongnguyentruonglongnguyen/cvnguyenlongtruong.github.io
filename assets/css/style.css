@@ -377,6 +377,39 @@ li.active a {
 .personal-information p span {
     vertical-align: middle !important;
 }
+.personal-information,
+.my-skill {
+    padding: 20px;
+}
+
+.personal-information p,
+.my-skill p {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.personal-information p span,
+.my-skill p span {
+    vertical-align: middle;
+    line-height: 1.5;
+}
+.category {
+    flex: 1;
+    font-weight: bold;
+    color: #1ABC9C;
+    font-size: 16px;
+    padding-right: 10px;
+}
+.detail {
+    flex: 2;
+    color: #333;
+    font-size: 16px;
+    text-align: left;
+}
 .progressbar {
     margin-bottom: 5px;
     background: #ddd !important;
@@ -1576,4 +1609,3 @@ Video Background CSS
         height: 100%;
     }
 }
-
