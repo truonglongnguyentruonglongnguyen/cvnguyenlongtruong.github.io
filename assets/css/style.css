@@ -1532,6 +1532,9 @@ Sample Page CSS
 .resume-project .list-projects {
     position: relative;
 }
+.resume-project {
+    margin-top: 30px;
+}
 .resume-project .list-projects:after {
     position: absolute;
     content: '';
