@@ -71,8 +71,26 @@ Responsive CSS Styles
         height: 300px;
         border-radius: 50%;
     }
-    .my-skill, .personal-information {
+    .personal-information,
+    .my-skill {
         padding: 20px;
+    }
+    .personal-information p,
+    .my-skill p {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 10px 0;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+    }
+    .category {
+        flex: 1;
+        font-size: 16px;
+    }
+    .detail {
+        flex: 2;
+        font-size: 16px;
     }
 }
 
@@ -219,8 +237,26 @@ Responsive CSS Styles
         padding: 0;
         padding-top: 78px;
     }
-    .my-skill, .personal-information {
+    .personal-information,
+    .my-skill {
         padding: 20px;
+    }
+    .personal-information p,
+    .my-skill p {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 10px 0;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+    }
+    .category {
+        flex: 1;
+        font-size: 16px;
+    }
+    .detail {
+        flex: 2;
+        font-size: 16px;
     }
 }
 
@@ -366,8 +402,20 @@ Responsive CSS Styles
     .section-title h2 {
         font-size: 25px;
     }
-    .my-skill, .personal-information {
+    .personal-information,
+    .my-skill {
         padding: 20px;
+    }
+    .personal-information p,
+    .my-skill p {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+    }
+    .category {
+        padding-bottom: 5px;
     }
 }
 
@@ -617,7 +665,19 @@ Responsive CSS Styles
         color: #fff;
         padding-bottom: 40px;
     }
-    .my-skill, .personal-information {
+    .personal-information,
+    .my-skill {
         padding: 20px;
+    }
+    .personal-information p,
+    .my-skill p {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+    }
+    .category {
+        padding-bottom: 5px;
     }
 }
