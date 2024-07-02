@@ -68,15 +68,15 @@
         });
 
         // Progress bars activation
-        activateProgressBar('#dsa');
-        activateProgressBar('#system-design');
-        activateProgressBar('.programming-language');
-        activateProgressBar('#database');
-        activateProgressBar('#ai');
-        activateProgressBar('#analytical-skills');
-        activateProgressBar('#problem-solving-skills');
-        activateProgressBar('#strong-collaboration-skills');
-        activateProgressBar('#agile-skills');
+        // activateProgressBar('#dsa');
+        // activateProgressBar('#system-design');
+        // activateProgressBar('.programming-language');
+        // activateProgressBar('#database');
+        // activateProgressBar('#ai');
+        // activateProgressBar('#analytical-skills');
+        // activateProgressBar('#problem-solving-skills');
+        // activateProgressBar('#strong-collaboration-skills');
+        // activateProgressBar('#agile-skills');
 
         // Function to activate progress bars
         function activateProgressBar(selector) {
@@ -145,6 +145,26 @@
             loop: true,
             showCursor: false,
             autoInsertCss: true
+        });
+
+        // Equalize heights of list-projects columns
+        function equalizeHeights() {
+            var maxHeight = 0;
+            $('.list-projects').each(function () {
+                var height = $(this).height();
+                if (height > maxHeight) {
+                    maxHeight = height;
+                }
+            });
+            $('.list-projects').height(maxHeight);
+        }
+
+        equalizeHeights();
+
+        // Equalize heights on window resize
+        $(window).resize(function () {
+            $('.list-projects').css('height', 'auto');
+            equalizeHeights();
         });
 
     });
