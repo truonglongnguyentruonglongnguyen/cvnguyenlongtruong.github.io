@@ -402,7 +402,7 @@ li.active a {
     font-weight: bold;
     color: #1ABC9C;
     font-size: 16px;
-    padding-right: 10px;
+    /* padding-right: 10px; */
 }
 .detail {
     flex: 2;
