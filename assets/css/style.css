@@ -1505,14 +1505,56 @@ Sample Page CSS
 #message {
     resize: none;
 }
+#blog .content-post h3 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    display: block;
+    white-space: normal; /* Allow the text to wrap */
+    overflow: visible;   /* Ensure no text is hidden */
+}
+
+#blog .content-post p {
+    font-weight: 400;
+    line-height: 1.5em;
+    margin-bottom: 0;
+    display: block;
+    /* Ensure full display of content */
+    white-space: normal;  /* Allow content to wrap */
+    overflow: visible;    /* Ensure no content is hidden */
+}
+
+#blog .blog-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+}
+
+#blog .post-footer {
+    position: relative;  /* Adjust based on content height */
+    bottom: auto;  /* Ensure footer stays aligned with content */
+    width: 100%;
+}
+
 #blog .blog-post {
     position: relative;
 }
-#blog .post-footer {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
+#blog .blog-post .content-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
+
+#blog .content-post h3 {
+    flex: 1; /* Ensures all h3 tags take up the same height */
+    display: flex;
+    align-items: flex-start; /* Align the text to the top */
+    min-height: 80px; /* Adjust based on the largest h3, or leave flex to handle it */
+}
+
 #blog .btn-read-more {
     float: right;
 }
