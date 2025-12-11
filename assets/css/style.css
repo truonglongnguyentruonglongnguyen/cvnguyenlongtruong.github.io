@@ -195,7 +195,7 @@ li {
 ==================*/
 .header {
     height: 100vh;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('../img/truonglong-cover.jpg') center/cover no-repeat;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('../img/team-cover.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
