@@ -46,7 +46,7 @@ class Portfolio {
             new Typed('.header__title', {
                 strings: [
                     'TRUONG <span style="color:#1ABC9C">LONG</span>',
-                    'WEB <span style="color:#1ABC9C">BACKEND</span>',
+                    'WEB <span style="color:#1ABC9C">FULL-STACK</span>',
                     'SOFTWARE <span style="color:#1ABC9C">ENGINEER</span>',
                 ],
                 typeSpeed: 60,
