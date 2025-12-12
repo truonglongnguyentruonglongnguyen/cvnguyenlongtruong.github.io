@@ -3,6 +3,7 @@ class Portfolio {
         this.$window = $(window);
         this.$document = $(document);
         this.$body = $('body');
+        this.$html = $('html');
         this.$nav = $('.nav');
         this.$preloader = $('.preloader');
         this.$scrollToTop = $('.scroll-to-top');
@@ -12,8 +13,7 @@ class Portfolio {
         this.$navToggle = $('.nav__toggle');
         this.$navOverlay = $('.nav__overlay');
 
-        // Save scroll position + overflow state
-        this._prevOverflow = this.$body.css('overflow');
+        // Save scroll position
         this._lockedScrollY = 0;
 
         this.sections = ['introduction-section', 'working-experience', 'project', 'interest', 'blog'];
@@ -102,6 +102,8 @@ class Portfolio {
 
     handleNavToggle(e) {
         e.preventDefault();
+        e.stopPropagation();
+        
         const expanded = this.$navToggle.attr('aria-expanded') === 'true';
         const willOpen = !expanded;
 
@@ -109,19 +111,50 @@ class Portfolio {
         this.$navOverlay.toggleClass('active', willOpen);
 
         if (willOpen) {
-            this._lockedScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
-            $('html, body').addClass('no-scroll');
-            this.$body
-                .data('prev-overflow', this.$body.css('overflow'))
-                .css({
-                    position: 'fixed',
-                    top: `-${this._lockedScrollY}px`,
-                    left: 0,
-                    right: 0,
-                    width: '100%'
-                });
+            this.lockScroll();
         } else {
             this.unlockScroll();
+        }
+    }
+
+    lockScroll() {
+        // Save current scroll position
+        this._lockedScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+        
+        // Add no-scroll class to html and body
+        this.$html.addClass('no-scroll');
+        this.$body.addClass('no-scroll');
+        
+        // Fix body position
+        this.$body.css({
+            position: 'fixed',
+            top: `-${this._lockedScrollY}px`,
+            left: '0',
+            right: '0',
+            width: '100%',
+            overflow: 'hidden'
+        });
+    }
+
+    unlockScroll() {
+        // Remove fixed positioning
+        this.$body.css({
+            position: '',
+            top: '',
+            left: '',
+            right: '',
+            width: '',
+            overflow: ''
+        });
+        
+        // Remove no-scroll classes
+        this.$html.removeClass('no-scroll');
+        this.$body.removeClass('no-scroll');
+        
+        // Restore scroll position
+        if (this._lockedScrollY) {
+            window.scrollTo(0, this._lockedScrollY);
+            this._lockedScrollY = 0;
         }
     }
 
@@ -135,20 +168,6 @@ class Portfolio {
         if (typeof afterClose === 'function') {
             requestAnimationFrame(afterClose);
         }
-    }
-
-    unlockScroll() {
-        const top = parseInt(this.$body.css('top'), 10) || 0;
-        this.$body.css({
-            position: '',
-            top: '',
-            left: '',
-            right: '',
-            width: '',
-            overflow: this.$body.data('prev-overflow') || ''
-        });
-        $('html, body').removeClass('no-scroll');
-        if (top) window.scrollTo(0, -top);
     }
 
     handleScroll() {
@@ -194,10 +213,14 @@ class Portfolio {
         });
 
         $('.nav__menu-item').removeClass('nav__menu-item--active');
+        $('.nav__overlay-item').removeClass('nav__overlay-item--active');
+        
         if (currentSection) {
             $(`.nav__menu-link[href="#${currentSection}"]`).parent().addClass('nav__menu-item--active');
+            $(`.nav__overlay-link[href="#${currentSection}"]`).parent().addClass('nav__overlay-item--active');
         } else if (scrollTop < 100) {
             $('.nav__menu-link[href="#"]').parent().addClass('nav__menu-item--active');
+            $('.nav__overlay-link[href="#"]').parent().addClass('nav__overlay-item--active');
         }
     }
 
@@ -270,6 +293,7 @@ class Portfolio {
         this.equalizeBlogCardHeights();
         this.equalizeProjectHeights();
         this.equalizeInfoCardHeights();
+        this.equalizeInterestCardHeights();
     }
 
     equalizeBlogCardHeights() {
@@ -317,6 +341,22 @@ class Portfolio {
             }
         } else {
             $('.info-card, .skills').css('height', 'auto');
+        }
+    }
+
+    equalizeInterestCardHeights() {
+        if (window.innerWidth > 767) {
+            const $interestCards = $('.interest-card');
+            if ($interestCards.length) {
+                let maxHeight = 0;
+                $interestCards.css('height', 'auto');
+                $interestCards.each((_, el) => {
+                    maxHeight = Math.max(maxHeight, $(el).outerHeight());
+                });
+                $interestCards.css('height', `${maxHeight}px`);
+            }
+        } else {
+            $('.interest-card').css('height', 'auto');
         }
     }
 
